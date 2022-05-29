@@ -68,7 +68,8 @@ public class String1 {
     }
 
     /**
-     * Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
+     * Given a string, return a new string made of 3 copies of the last 2 chars of the original string.
+     * The string length will be at least 2.
      *
      * extraEnd("Hello") → "lololo"
      * extraEnd("ab") → "ababab"
@@ -80,5 +81,23 @@ public class String1 {
     public String extraEnd(String str){
         String last = str.substring(str.length() - 2);
         return last + last + last;
+    }
+
+    /**
+     * Given a string, return the string made of its first two chars,
+     * so the String "Hello" yields "He". If the string is shorter than length 2,
+     * return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "".
+     * Note that str.length() returns the length of a string.
+     *
+     * firstTwo("Hello") → "He"
+     * firstTwo("abcdefg") → "ab"
+     * firstTwo("ab") → "ab"
+     *
+     * @param str to return the first two characters of
+     * @return the first to characters String paramater
+     */
+    public String firstTwo(String str){
+        if (str.length() < 2) return str; // Check to make sure there's at least two characters
+        return str.substring(0, 2);
     }
 }

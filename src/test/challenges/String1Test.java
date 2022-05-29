@@ -62,4 +62,14 @@ class String1Test {
 
         assertEquals(extraEnd, expected);
     }
+
+    @Test
+    void firstTwo() {
+        String str = "abcdefg";
+
+        String firstTwo = string1.firstTwo(str);
+        String expected = "ab";
+
+        assertEquals(firstTwo, expected);
+    }
 }
