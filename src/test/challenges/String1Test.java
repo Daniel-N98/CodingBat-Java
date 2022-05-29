@@ -164,4 +164,14 @@ class String1Test {
 
         assertEquals(withouEnd2, "");
     }
+
+    @Test
+    void middleTwo() {
+        String str = "Practice";
+
+        String middleTwo = string1.middleTwo(str);
+        String expected = "ct";
+
+        assertEquals(middleTwo, expected);
+    }
 }
