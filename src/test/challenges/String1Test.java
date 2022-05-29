@@ -184,4 +184,15 @@ class String1Test {
         assertTrue(endsLy);
         assertFalse(endsLy2);
     }
+
+    @Test
+    void nTwice() {
+        String str = "Chocolate";
+        int n = 3;
+
+        String nTwice = string1.nTwice(str, n);
+        String expected = "Choate";
+
+        assertEquals(nTwice, expected);
+    }
 }
