@@ -14,7 +14,7 @@ class String1Test {
     }
 
     @Test
-    void helloNameTest(){
+    void helloName(){
         String name = "Bob";
         String greeting = string1.helloName(name);
 
@@ -50,7 +50,16 @@ class String1Test {
         String makeOutWord = string1.makeOutWord(out, word);
         String expected = "<<WooHoo>>";
 
-
         assertEquals(makeOutWord, expected);
+    }
+
+    @Test
+    void extraEnd() {
+        String str = "Hello";
+
+        String extraEnd = string1.extraEnd(str);
+        String expected = "lololo"; // Last two characters of "Hello" repeated 3 times
+
+        assertEquals(extraEnd, expected);
     }
 }
