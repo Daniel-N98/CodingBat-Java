@@ -72,4 +72,14 @@ class String1Test {
 
         assertEquals(firstTwo, expected);
     }
+
+    @Test
+    void firstHalf() {
+        String str = "HelloThere";
+
+        String firstHalf = string1.firstHalf(str);
+        String expected = "Hello";
+
+        assertEquals(firstHalf, expected);
+    }
 }

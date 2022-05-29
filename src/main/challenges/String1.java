@@ -100,4 +100,18 @@ public class String1 {
         if (str.length() < 2) return str; // Check to make sure there's at least two characters
         return str.substring(0, 2);
     }
+
+    /**
+     * Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+     *
+     * firstHalf("WooHoo") → "Woo"
+     * firstHalf("HelloThere") → "Hello"
+     * firstHalf("abcdef") → "abc"
+     *
+     * @param str String value
+     * @return First half of the String parameter
+     */
+    public String firstHalf(String str){
+        return str.substring(0, str.length()/2);
+    }
 }
