@@ -17,6 +17,27 @@ class String1Test {
     public void helloNameTest(){
         String name = "Bob";
         String greeting = string1.helloName(name);
+
         assertEquals(greeting, "Hello Bob!");
+    }
+
+    @Test
+    void makeAbba() {
+        String a = "Yo";
+        String b = "Alice";
+        String makeAbba = string1.makeAbba(a, b);
+
+        assertEquals(makeAbba, a + b + b + a);
+    }
+
+    @Test
+    void makeTags() {
+        String tag = "cite";
+        String word = "Yay";
+
+        String makeTags = string1.makeTags(tag, word);
+        String expected = "<" + tag + ">" + word + "</" + tag + ">";
+
+        assertEquals(makeTags, expected);
     }
 }
