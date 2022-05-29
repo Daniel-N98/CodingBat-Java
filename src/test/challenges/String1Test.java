@@ -3,7 +3,7 @@ package challenges;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class String1Test {
     private static String1 string1;
@@ -152,16 +152,14 @@ class String1Test {
     @Test
     void withouEnd() {
         String str = "Hello";
+        String str2 = "ac"; // 2 character String should return an empty String
 
         String withouEnd = string1.withouEnd(str);
+        String withouEnd2 = string1.withouEnd(str2);
+
         String expected = "ell";
 
         assertEquals(withouEnd, expected);
-
-        String str2 = "ac"; // 2 character String should return an empty String
-
-        String withouEnd2 = string1.withouEnd(str2);
-
         assertEquals(withouEnd2, "");
     }
 
@@ -173,5 +171,17 @@ class String1Test {
         String expected = "ct";
 
         assertEquals(middleTwo, expected);
+    }
+
+    @Test
+    void endsLy() {
+        String str = "oddly";
+        String str2 = "oddy";
+
+        boolean endsLy = string1.endsLy(str);
+        boolean endsLy2 = string1.endsLy(str2);
+
+        assertTrue(endsLy);
+        assertFalse(endsLy2);
     }
 }
