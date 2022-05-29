@@ -195,4 +195,20 @@ class String1Test {
 
         assertEquals(nTwice, expected);
     }
+
+    @Test
+    void twoChar() {
+        String str = "java";
+        int index = 2;
+        int index2 = 3;
+
+        String twoChar = string1.twoChar(str, index);
+        String twoChar2 = string1.twoChar(str, index2);
+
+        String expected = "va";
+        String expected2 = "ja";
+
+        assertEquals(twoChar, expected);
+        assertEquals(twoChar2, expected2);
+    }
 }
