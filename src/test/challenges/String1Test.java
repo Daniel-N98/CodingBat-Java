@@ -9,12 +9,12 @@ class String1Test {
     private static String1 string1;
 
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         string1 = new String1();
     }
 
     @Test
-    void helloName(){
+    void helloName() {
         String name = "Bob";
         String greeting = string1.helloName(name);
 
