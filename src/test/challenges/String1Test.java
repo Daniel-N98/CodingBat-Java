@@ -103,4 +103,15 @@ class String1Test {
 
         assertEquals(comboString, expected);
     }
+
+    @Test
+    void nonStart() {
+        String a = "java";
+        String b = "code";
+
+        String nonStart = string1.nonStart(a, b);
+        String expected = "avaode";
+
+        assertEquals(nonStart, expected);
+    }
 }

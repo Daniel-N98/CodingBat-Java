@@ -149,4 +149,20 @@ public class String1 {
                 b + a + b :
                 a + b + a;
     }
+
+    /**
+     * Given 2 strings, return their concatenation, except omit the first char of each.
+     * The strings will be at least length 1.
+     *
+     * nonStart("Hello", "There") → "ellohere"
+     * nonStart("java", "code") → "avaode"
+     * nonStart("shotl", "java") → "hotlava"
+     *
+     * @param a String value
+     * @param b String value
+     * @return String values combined without the first char of each
+     */
+    public String nonStart(String a, String b){
+        return String.format("%s%s", a.substring(1), b.substring(1));
+    }
 }
