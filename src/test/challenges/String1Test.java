@@ -82,4 +82,14 @@ class String1Test {
 
         assertEquals(firstHalf, expected);
     }
+
+    @Test
+    void withoutEnd() {
+        String str = "Java";
+
+        String withoutEnd = string1.withoutEnd(str);
+        String expected = "av";
+
+        assertEquals(withoutEnd, expected);
+    }
 }

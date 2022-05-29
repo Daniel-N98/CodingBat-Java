@@ -60,7 +60,7 @@ public class String1 {
      * makeOutWord("[[]]", "word") → "[[word]]"
      *
      * @param out symbols
-     * @param word to be placed inside the symbol
+     * @param word to be placed inside the symbols
      * @return word enclosed by symbols
      */
     public String makeOutWord(String out, String word) {
@@ -75,8 +75,8 @@ public class String1 {
      * extraEnd("ab") → "ababab"
      * extraEnd("Hi") → "HiHiHi"
      *
-     * @param str to repeat the last two characters of
-     * @return str repeated
+     * @param str String value
+     * @return String parameters last two characters repeated 3 times
      */
     public String extraEnd(String str){
         String last = str.substring(str.length() - 2);
@@ -93,8 +93,8 @@ public class String1 {
      * firstTwo("abcdefg") → "ab"
      * firstTwo("ab") → "ab"
      *
-     * @param str to return the first two characters of
-     * @return the first to characters String paramater
+     * @param str String value
+     * @return the first to characters String parameter
      */
     public String firstTwo(String str){
         if (str.length() < 2) return str; // Check to make sure there's at least two characters
@@ -102,7 +102,8 @@ public class String1 {
     }
 
     /**
-     * Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+     * Given a string of even length, return the first half.
+     * So the string "WooHoo" yields "Woo".
      *
      * firstHalf("WooHoo") → "Woo"
      * firstHalf("HelloThere") → "Hello"
@@ -113,5 +114,20 @@ public class String1 {
      */
     public String firstHalf(String str){
         return str.substring(0, str.length()/2);
+    }
+
+    /**
+     * Given a string, return a version without the first and last char,
+     * so "Hello" yields "ell". The string length will be at least 2.
+     *
+     * withoutEnd("Hello") → "ell"
+     * withoutEnd("java") → "av"
+     * withoutEnd("coding") → "odin"
+     *
+     * @param str String value
+     * @return String parameter without first & last characters.
+     */
+    public String withoutEnd(String str){
+        return str.substring(1, str.length() - 1);
     }
 }
