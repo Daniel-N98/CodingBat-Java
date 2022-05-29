@@ -211,4 +211,21 @@ public class String1 {
     public String theEnd(String str, boolean front){
         return front ? str.substring(0, 1) : str.substring(str.length() -1);
     }
+
+    /**
+     * Given a string, return a version without both the first and last char of the string.
+     * The string may be any length, including 0.
+     *
+     * withouEnd2("Hello") → "ell"
+     * withouEnd2("abc") → "b"
+     * withouEnd2("ab") → ""
+     *
+     * @param str String value
+     * @return String parameter without first, and last character.
+     */
+    public String withouEnd(String str){
+        if (str.length() <= 2) return "";
+
+        return str.substring(1, str.length() - 1);
+    }
 }

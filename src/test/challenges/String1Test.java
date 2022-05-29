@@ -148,4 +148,20 @@ class String1Test {
         assertEquals(frontTrue, expectedTrue);
         assertEquals(frontFalse, expectedFalse);
     }
+
+    @Test
+    void withouEnd() {
+        String str = "Hello";
+
+        String withouEnd = string1.withouEnd(str);
+        String expected = "ell";
+
+        assertEquals(withouEnd, expected);
+
+        String str2 = "ac"; // 2 character String should return an empty String
+
+        String withouEnd2 = string1.withouEnd(str2);
+
+        assertEquals(withouEnd2, "");
+    }
 }
