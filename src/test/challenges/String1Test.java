@@ -134,4 +134,18 @@ class String1Test {
 
         assertEquals(right2, expected);
     }
+
+    @Test
+    void theEnd() {
+        String str = "Hello";
+
+        String frontTrue = string1.theEnd(str, true);
+        String frontFalse = string1.theEnd(str, false);
+
+        String expectedTrue = "H"; // First character of str
+        String expectedFalse = "o"; // Last character of str
+
+        assertEquals(frontTrue, expectedTrue);
+        assertEquals(frontFalse, expectedFalse);
+    }
 }

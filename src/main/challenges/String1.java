@@ -195,4 +195,20 @@ public class String1 {
     public String right2(String str) {
         return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
     }
+
+    /**
+     * Given a string, return a string length 1 from its front, unless front is false,
+     * in which case return a string length 1 from its back. The string will be non-empty.
+     *
+     * theEnd("Hello", true) → "H"
+     * theEnd("Hello", false) → "o"
+     * theEnd("oh", true) → "o"
+     *
+     * @param str String value
+     * @param front Boolean value
+     * @return First character of String parameter if Boolean parameter is true, last character otherwise
+     */
+    public String theEnd(String str, boolean front){
+        return front ? str.substring(0, 1) : str.substring(str.length() -1);
+    }
 }
