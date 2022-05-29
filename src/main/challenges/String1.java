@@ -12,12 +12,13 @@ public class String1 {
      * @param name to be greeted
      * @return a pleasant greeting
      */
-    public String helloName(String name){
+    public String helloName(String name) {
         return "Hello " + name + "!";
     }
 
     /**
-     * Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+     * Given two strings, a and b, return the result of putting them together in the order abba,
+     * e.g. "Hi" and "Bye" returns "HiByeByeHi".
      *
      * makeAbba("Hi", "Bye") → "HiByeByeHi"
      * makeAbba("Yo", "Alice") → "YoAliceAliceYo"
@@ -27,22 +28,42 @@ public class String1 {
      * @param b String
      * @return 'abba' connected String
      */
-    public String makeAbba(String a, String b){
+    public String makeAbba(String a, String b) {
         return a + b + b + a;
     }
 
     /**
-     * The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this example, the "i" tag makes <i> and </i> which surround the word "Yay". Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
+     * The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text.
+     * In this example, the "i" tag makes <i> and </i> which surround the word "Yay".
+     * Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
      *
      * makeTags("i", "Yay") → "<i>Yay</i>"
      * makeTags("i", "Hello") → "<i>Hello</i>"
      * makeTags("cite", "Yay") → "<cite>Yay</cite>"
      *
-     * @param tag HTML tag
+     * @param tag  HTML tag
      * @param word to go inside the HTML tag
      * @return String - complete HTML tag
      */
-    public String makeTags(String tag, String word){
+    public String makeTags(String tag, String word) {
         return String.format("<%s>%s</%s>", tag, word, tag);
+    }
+
+    /**
+     * Given an "out" string length 4, such as "<<>>", and a word,
+     * return a new string where the word is in the middle of the out string,
+     * e.g. "<<word>>".
+     * Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.
+     *
+     * makeOutWord("<<>>", "Yay") → "<<Yay>>"
+     * makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+     * makeOutWord("[[]]", "word") → "[[word]]"
+     *
+     * @param out symbols
+     * @param word to be placed inside the symbol
+     * @return word enclosed by symbols
+     */
+    public String makeOutWord(String out, String word) {
+        return String.format("%s%s%s", out.substring(0,2), word, out.substring(2,4));
     }
 }

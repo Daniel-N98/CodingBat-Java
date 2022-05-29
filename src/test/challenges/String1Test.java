@@ -14,7 +14,7 @@ class String1Test {
     }
 
     @Test
-    public void helloNameTest(){
+    void helloNameTest(){
         String name = "Bob";
         String greeting = string1.helloName(name);
 
@@ -25,6 +25,7 @@ class String1Test {
     void makeAbba() {
         String a = "Yo";
         String b = "Alice";
+
         String makeAbba = string1.makeAbba(a, b);
 
         assertEquals(makeAbba, a + b + b + a);
@@ -39,5 +40,17 @@ class String1Test {
         String expected = "<" + tag + ">" + word + "</" + tag + ">";
 
         assertEquals(makeTags, expected);
+    }
+
+    @Test
+    void makeOutWord() {
+        String out = "<<>>";
+        String word = "WooHoo";
+
+        String makeOutWord = string1.makeOutWord(out, word);
+        String expected = "<<WooHoo>>";
+
+
+        assertEquals(makeOutWord, expected);
     }
 }
