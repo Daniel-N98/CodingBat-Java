@@ -114,4 +114,14 @@ class String1Test {
 
         assertEquals(nonStart, expected);
     }
+
+    @Test
+    void left2() {
+        String str = "java";
+
+        String left2 = string1.left2(str);
+        String expected = "vaja";
+
+        assertEquals(left2, expected);
+    }
 }
