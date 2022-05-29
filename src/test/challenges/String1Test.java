@@ -92,4 +92,15 @@ class String1Test {
 
         assertEquals(withoutEnd, expected);
     }
+
+    @Test
+    void comboString() {
+        String a = "aaa";
+        String b = "b";
+
+        String comboString = string1.comboString(a, b);
+        String expected = "baaab";
+
+        assertEquals(comboString, expected);
+    }
 }
