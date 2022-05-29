@@ -211,4 +211,19 @@ class String1Test {
         assertEquals(twoChar, expected);
         assertEquals(twoChar2, expected2);
     }
+
+    @Test
+    void middleThree() {
+        String str = "Candy";
+        String str2 = "Solving";
+
+        String middleThree = string1.middleThree(str);
+        String middleThree2 = string1.middleThree(str2);
+
+        String expected = "and";
+        String expected2 = "lvi";
+
+        assertEquals(middleThree, expected);
+        assertEquals(middleThree2, expected2);
+    }
 }

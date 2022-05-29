@@ -288,4 +288,20 @@ public class String1 {
         if (index <= 0 || (index + 1) > str.length()) return str.substring(0, 2);
         return str.substring(index, index + 2);
     }
+
+    /**
+     * Given a string of odd length, return the string length 3 from its middle,
+     * so "Candy" yields "and". The string length will be at least 3.
+     *
+     * middleThree("Candy") → "and"
+     * middleThree("and") → "and"
+     * middleThree("solving") → "lvi"
+     *
+     * @param str String value of odd length
+     * @return middle three characters of String parameter
+     */
+    public String middleThree(String str){
+        int half = str.length() / 2;
+        return str.substring(half - 1, half + 2);
+    }
 }
