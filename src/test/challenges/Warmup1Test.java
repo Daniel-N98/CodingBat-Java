@@ -128,4 +128,21 @@ class Warmup1Test {
         assertEquals(notString2, str2); // str2 should remain unchanged
 
     }
+
+    @Test
+    void missingChar() {
+        String str = "kitten";
+
+        String missingChar = warmup1.missingChar(str, 1);
+        String missingChar2 = warmup1.missingChar(str, 0);
+        String missingChar3 = warmup1.missingChar(str, 4);
+
+        String expected = "ktten";
+        String expected2 = "itten";
+        String expected3 = "kittn";
+
+        assertEquals(missingChar, expected);
+        assertEquals(missingChar2, expected2);
+        assertEquals(missingChar3, expected3);
+    }
 }
