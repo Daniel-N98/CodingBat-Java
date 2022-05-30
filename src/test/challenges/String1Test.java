@@ -364,4 +364,21 @@ class String1Test {
         assertEquals(minCat, expected);
         assertEquals(minCat2, expected2);
     }
+
+    @Test
+    void extraFront() {
+        String str = "Hello";
+        String str2 = "ab";
+
+        String extraFront = string1.extraFront(str);
+        String extraFront2 = string1.extraFront(str2);
+        String extraFront3 = string1.extraFront("");
+
+        String expected = "HeHeHe";
+        String expected2 = "ababab";
+
+        assertEquals(extraFront, expected);
+        assertEquals(extraFront2, expected2);
+        assertEquals(extraFront3, "");
+    }
 }
