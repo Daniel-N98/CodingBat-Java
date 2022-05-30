@@ -450,7 +450,7 @@ public class String1 {
      * However, if the strings are different lengths, omit chars from the longer string so that
      * it is the same length as the shorter string.
      * So "Hello" and "Hi" yield "loHi". The strings may be any length.
-     *
+     * <p>
      * minCat("Hello", "Hi") → "loHi"
      * minCat("Hello", "java") → "ellojava"
      * minCat("java", "Hello") → "javaello"
@@ -459,8 +459,8 @@ public class String1 {
      * @param b String value
      * @return String value
      */
-    public String minCat(String a, String b){
-        if (a.length() == b.length())return a+b;
+    public String minCat(String a, String b) {
+        if (a.length() == b.length()) return a + b;
 
         int aLength = a.length();
         int bLength = b.length();
@@ -468,10 +468,10 @@ public class String1 {
         int diff = Integer.compare(aLength, bLength);
 
         // Diff will only be -1, or 1 as we return above if the String parameter lengths are equal.
-        if (diff == - 1){
+        if (diff == -1) {
             // - 1 = first int (aLength) is smaller.
             b = b.substring(bLength - aLength);
-        }else{
+        } else {
             // 1 = second int (bLength) is smaller.
             a = a.substring(aLength - bLength);
         }
@@ -482,7 +482,7 @@ public class String1 {
     /**
      * Given a string, return a new string made of 3 copies of the first 2 chars of the original string.
      * The string may be any length. If there are fewer than 2 chars, use whatever is there.
-     *
+     * <p>
      * extraFront("Hello") → "HeHeHe"
      * extraFront("ab") → "ababab"
      * extraFront("H") → "HHH"
@@ -490,10 +490,32 @@ public class String1 {
      * @param str String value
      * @return String made up of 3 copies of the first two characters of String parameter
      */
-    public String extraFront(String str){
-        if (str.length() >= 2){
+    public String extraFront(String str) {
+        if (str.length() >= 2) {
             str = str.substring(0, 2);
         }
         return str + str + str;
+    }
+
+    /**
+     * Given a string, if a length 2 substring appears at both its beginning and end,
+     * return a string without the substring at the beginning, so "HelloHe" yields "lloHe".
+     * The substring may overlap with itself, so "Hi" yields "". Otherwise,
+     * return the original string unchanged.
+     * <p>
+     * without2("HelloHe") → "lloHe"
+     * without2("HelloHi") → "HelloHi"
+     * without2("Hi") → ""
+     *
+     * @param str String value
+     * @return String Value
+     */
+    public String without2(String str) {
+        if (str.length() >= 2) {
+            if (str.substring(0, 2).equals(str.substring(str.length() - 2))) {
+                return str.substring(2);
+            }
+        }
+        return str;
     }
 }
