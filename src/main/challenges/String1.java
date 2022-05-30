@@ -571,4 +571,29 @@ public class String1 {
                 ? str.substring(0,word.length())
                 : "";
     }
+
+    /**
+     * Given a string, if the first or last chars are 'x',
+     * return the string without those 'x' chars,
+     * and otherwise return the string unchanged.
+     *
+     * withoutX("xHix") → "Hi"
+     * withoutX("xHi") → "Hi"
+     * withoutX("Hxix") → "Hxi"
+     *
+     * @param str String value
+     * @return String parameter without 'x' character in first, or last index
+     */
+    public String withoutX(String str){
+        if (str.length() > 0 && str.charAt(0) == 'x'){
+            str = str.substring(1);
+        }
+        int lastIndex = str.length() - 1;
+
+        if (str.length() > 0 && str.charAt(lastIndex) == 'x'){
+            str = str.substring(0, lastIndex);
+        }
+
+        return str;
+    }
 }

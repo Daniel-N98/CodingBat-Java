@@ -437,4 +437,23 @@ class String1Test {
         assertEquals(startWord, expected);
         assertEquals(startWord2, expected2);
     }
+
+    @Test
+    void withoutX() {
+        String str = "xHix";
+        String str2 = "xHi";
+        String str3 = "Hxix";
+
+        String withoutX = string1.withoutX(str);
+        String withoutX2 = string1.withoutX(str2);
+        String withoutX3 = string1.withoutX(str3);
+
+        String expected = "Hi"; // str & str2 should return the same value
+        String expected2 = "Hxi";
+
+        assertEquals(withoutX, expected);
+        assertEquals(withoutX2, expected);
+        assertEquals(withoutX3, expected2);
+
+    }
 }
