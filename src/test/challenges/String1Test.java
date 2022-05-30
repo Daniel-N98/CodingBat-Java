@@ -226,4 +226,19 @@ class String1Test {
         assertEquals(middleThree, expected);
         assertEquals(middleThree2, expected2);
     }
+
+    @Test
+    void hasBad() {
+        String str = "badxx";
+        String str2 = "xbadxx";
+        String str3 = "xxbadxx";
+
+        boolean hasBad = string1.hasBad(str);
+        boolean hasBad2 = string1.hasBad(str2);
+        boolean hasBad3 = string1.hasBad(str3);
+
+        assertTrue(hasBad);
+        assertTrue(hasBad2);
+        assertFalse(hasBad3);
+    }
 }

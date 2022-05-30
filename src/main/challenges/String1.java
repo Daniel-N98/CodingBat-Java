@@ -304,4 +304,20 @@ public class String1 {
         int half = str.length() / 2;
         return str.substring(half - 1, half + 2);
     }
+
+    /**
+     * Given a string, return true if "bad" appears starting at index 0 or 1 in the string,
+     * such as with "badxxx" or "xbadxx" but not "xxbadxx".
+     * The string may be any length, including 0. Note: use .equals() to compare 2 strings.
+     *
+     * hasBad("badxx") → true
+     * hasBad("xbadxx") → true
+     * hasBad("xxbadxx") → false
+     *
+     * @param str String value
+     * @return True if 'bad' appears starting at index 0, or 1. False otherwise
+     */
+    public boolean hasBad(String str){
+        return str.startsWith("bad") || str.startsWith("bad", 1);
+    }
 }
