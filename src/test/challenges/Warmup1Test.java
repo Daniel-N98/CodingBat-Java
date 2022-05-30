@@ -229,4 +229,16 @@ class Warmup1Test {
         assertEquals(front22, expected);
         assertEquals(front22_2, expected2);
     }
+
+    @Test
+    void startHi() {
+        String str = "hi there";
+        String str2 = "Hello hi";
+
+        boolean startHi = warmup1.startHi(str);
+        boolean startHi2 = warmup1.startHi(str2);
+
+        assertTrue(startHi);
+        assertFalse(startHi2);
+    }
 }

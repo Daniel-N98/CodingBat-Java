@@ -257,4 +257,19 @@ public class Warmup1 {
                 : str);
         return sub + str + sub;
     }
+
+    /**
+     * Given a string, return true if the string starts with "hi" and false otherwise.
+     *
+     * startHi("hi there") → true
+     * startHi("hi") → true
+     * startHi("hello hi") → false
+     *
+     * @param str String value
+     * @return True if String parameter starts with 'hi', false otherwise
+     */
+    public boolean startHi(String str) {
+        return str.startsWith("hi");
+    }
+
 }
