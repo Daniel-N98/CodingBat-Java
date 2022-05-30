@@ -268,4 +268,15 @@ class Warmup1Test {
         assertTrue(hasTeen);
         assertFalse(hasTeen2);
     }
+
+    @Test
+    void loneTeen() {
+        boolean loneTeen = warmup1.loneTeen(13, 99);
+        boolean loneTeen2 = warmup1.loneTeen(13, 15);
+        boolean loneTeen3 = warmup1.loneTeen(23, 14);
+
+        assertTrue(loneTeen);
+        assertFalse(loneTeen2);
+        assertTrue(loneTeen3);
+    }
 }
