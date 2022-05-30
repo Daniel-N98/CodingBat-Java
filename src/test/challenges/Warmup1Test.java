@@ -112,4 +112,20 @@ class Warmup1Test {
         assertTrue(posNeg2);
         assertFalse(posNeg3);
     }
+
+
+    @Test
+    void notString() {
+        String str = "candy";
+        String str2 = "not bad";
+
+        String notString = warmup1.notString(str);
+        String notString2 = warmup1.notString(str2);
+
+        String expected = "not candy";
+
+        assertEquals(notString, expected);
+        assertEquals(notString2, str2); // str2 should remain unchanged
+
+    }
 }
