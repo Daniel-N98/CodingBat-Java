@@ -444,4 +444,38 @@ public class String1 {
 
         return str.substring(0, 2).equals(str.substring(str.length() - 2));
     }
+
+    /**
+     * Given two strings, append them together (known as "concatenation") and return the result.
+     * However, if the strings are different lengths, omit chars from the longer string so that
+     * it is the same length as the shorter string.
+     * So "Hello" and "Hi" yield "loHi". The strings may be any length.
+     *
+     * minCat("Hello", "Hi") → "loHi"
+     * minCat("Hello", "java") → "ellojava"
+     * minCat("java", "Hello") → "javaello"
+     *
+     * @param a String value
+     * @param b String value
+     * @return String value
+     */
+    public String minCat(String a, String b){
+        if (a.length() == b.length())return a+b;
+
+        int aLength = a.length();
+        int bLength = b.length();
+        // Compare the String lengths to find the largest
+        int diff = Integer.compare(aLength, bLength);
+
+        // Diff will only be -1, or 1 as we return above if the String parameter lengths are equal.
+        if (diff == - 1){
+            // - 1 = first int (aLength) is smaller.
+            b = b.substring(bLength - aLength);
+        }else{
+            // 1 = second int (bLength) is smaller.
+            a = a.substring(aLength - bLength);
+        }
+
+        return a + b;
+    }
 }

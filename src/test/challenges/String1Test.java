@@ -347,4 +347,21 @@ class String1Test {
         assertFalse(frontAgain2);
         assertFalse(frontAgain3);
     }
+
+    @Test
+    void minCat() {
+        String a = "Hello";
+        String b = "Hi";
+        String a2 = "Hello";
+        String b2 = "Java";
+
+        String minCat = string1.minCat(a, b);
+        String minCat2 = string1.minCat(a2, b2);
+
+        String expected = "loHi";
+        String expected2 = "elloJava";
+
+        assertEquals(minCat, expected);
+        assertEquals(minCat2, expected2);
+    }
 }
