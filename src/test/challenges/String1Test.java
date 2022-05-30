@@ -330,5 +330,21 @@ class String1Test {
         assertEquals(seeColor2, expected2);
         assertEquals(seeColor3, expected3);
 
+
+    }
+
+    @Test
+    void frontAgain() {
+        String str = "edited";
+        String str2 = "edit";
+        String str3 = "";
+
+        boolean frontAgain = string1.frontAgain(str);
+        boolean frontAgain2 = string1.frontAgain(str2);
+        boolean frontAgain3 = string1.frontAgain(str3);
+
+        assertTrue(frontAgain);
+        assertFalse(frontAgain2);
+        assertFalse(frontAgain3);
     }
 }
