@@ -311,4 +311,24 @@ class String1Test {
         assertEquals(lastTwo, expected);
         assertEquals(lastTwo2, expected2);
     }
+
+    @Test
+    void seeColor() {
+        String str = "redxx";
+        String str2 = "xxred";
+        String str3 = "blueTimes";
+
+        String seeColor = string1.seeColor(str);
+        String seeColor2 = string1.seeColor(str2);
+        String seeColor3 = string1.seeColor(str3);
+
+        String expected = "red";
+        String expected2 = "";
+        String expected3 = "blue";
+
+        assertEquals(seeColor, expected);
+        assertEquals(seeColor2, expected2);
+        assertEquals(seeColor3, expected3);
+
+    }
 }

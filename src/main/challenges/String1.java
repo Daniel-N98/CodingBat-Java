@@ -406,4 +406,24 @@ public class String1 {
 
         return str.substring(0, length - 2) + str.charAt(length - 1) + str.charAt(length - 2);
     }
+
+    /**
+     * Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
+     * <p>
+     * seeColor("redxx") → "red"
+     * seeColor("xxred") → ""
+     * seeColor("blueTimes") → "blue"
+     *
+     * @param str String value
+     * @return The color at the beginning of the String parameter, or an Empty String if no colors present
+     */
+    public String seeColor(String str) {
+        boolean startsWithRed = str.startsWith("red");
+
+        return (startsWithRed)
+                ? "red"
+                : str.startsWith("blue")
+                ? "blue"
+                : "";
+    }
 }
