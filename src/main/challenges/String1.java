@@ -523,7 +523,7 @@ public class String1 {
      * Given a string, return a version without the first 2 chars.
      * Except keep the first char if it is 'a' and keep the second char if it is 'b'.
      * The string may be any length. Harder than it looks.
-     *
+     * <p>
      * deFront("Hello") → "llo"
      * deFront("java") → "va"
      * deFront("away") → "aay"
@@ -531,16 +531,16 @@ public class String1 {
      * @param str String value
      * @return String value
      */
-    public String deFront(String str){
+    public String deFront(String str) {
         // Get the first two characters of the String parameter
-        String firstTwo = str.substring(0,2);
+        String firstTwo = str.substring(0, 2);
 
         // Set the first character of firstTwo to '@' if it does not equal 'a'
-        if (firstTwo.charAt(0) != 'a'){
+        if (firstTwo.charAt(0) != 'a') {
             firstTwo = "@" + firstTwo.charAt(1);
         }
         // Set the second character of firstTwo to '@' if it does not equal 'b'
-        if (firstTwo.charAt(1) != 'b'){
+        if (firstTwo.charAt(1) != 'b') {
             firstTwo = firstTwo.charAt(0) + "@";
         }
 
@@ -555,20 +555,20 @@ public class String1 {
      * On a match, return the front of the string, or otherwise return the empty string.
      * So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip".
      * The word will be at least length 1.
-     *
+     * <p>
      * startWord("hippo", "hi") → "hi"
      * startWord("hippo", "xip") → "hip"
      * startWord("hippo", "i") → "h"
      *
-     * @param str String value
+     * @param str  String value
      * @param word String value
      * @return String value
      */
-    public String startWord(String str, String word){
+    public String startWord(String str, String word) {
         if (str.length() == 0) return "";
 
         return (str.substring(1).startsWith(word.substring(1)))
-                ? str.substring(0,word.length())
+                ? str.substring(0, word.length())
                 : "";
     }
 
@@ -576,7 +576,7 @@ public class String1 {
      * Given a string, if the first or last chars are 'x',
      * return the string without those 'x' chars,
      * and otherwise return the string unchanged.
-     *
+     * <p>
      * withoutX("xHix") → "Hi"
      * withoutX("xHi") → "Hi"
      * withoutX("Hxix") → "Hxi"
@@ -584,13 +584,13 @@ public class String1 {
      * @param str String value
      * @return String parameter without 'x' character in first, or last index
      */
-    public String withoutX(String str){
-        if (str.length() > 0 && str.charAt(0) == 'x'){
+    public String withoutX(String str) {
+        if (str.length() > 0 && str.charAt(0) == 'x') {
             str = str.substring(1);
         }
         int lastIndex = str.length() - 1;
 
-        if (str.length() > 0 && str.charAt(lastIndex) == 'x'){
+        if (str.length() > 0 && str.charAt(lastIndex) == 'x') {
             str = str.substring(0, lastIndex);
         }
 
