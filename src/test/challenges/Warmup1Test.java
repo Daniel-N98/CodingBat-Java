@@ -279,4 +279,22 @@ class Warmup1Test {
         assertFalse(loneTeen2);
         assertTrue(loneTeen3);
     }
+
+    @Test
+    void delDel() {
+        String str = "adelbc";
+        String str2 = "adelHello";
+        String str3 = "adedbc";
+
+        String delDel = warmup1.delDel(str);
+        String delDel2 = warmup1.delDel(str2);
+        String delDel3 = warmup1.delDel(str3);
+
+        String expected = "abc";
+        String expected2 = "aHello";
+
+        assertEquals(delDel, expected);
+        assertEquals(delDel2, expected2);
+        assertEquals(delDel3, str3);
+    }
 }
