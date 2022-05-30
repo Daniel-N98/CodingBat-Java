@@ -381,4 +381,26 @@ class String1Test {
         assertEquals(extraFront2, expected2);
         assertEquals(extraFront3, "");
     }
+
+    @Test
+    void without2() {
+        String str = "HelloHe";
+        String str2 = "HelloHi";
+        String str3 = "Hi";
+        String str4 = "H";
+
+        String without = string1.without2(str);
+        String without2 = string1.without2(str2);
+        String without3 = string1.without2(str3);
+        String without4 = string1.without2(str4);
+
+        String expected = "lloHe";
+        String expected2 = "HelloHi";
+
+        assertEquals(without, expected);
+        assertEquals(without2, expected2);
+        assertEquals(without3, "");
+        assertEquals(without4, "H");
+
+    }
 }
