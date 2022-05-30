@@ -73,4 +73,15 @@ class Warmup1Test {
         assertFalse(parrotTrouble3);
 
     }
+
+    @Test
+    void makes10() {
+        boolean makes10 = warmup1.makes10(9, 10);
+        boolean makes10_2 = warmup1.makes10(9, 9);
+        boolean makes10_3 = warmup1.makes10(1, 9);
+
+        assertTrue(makes10);
+        assertFalse(makes10_2);
+        assertTrue(makes10_3);
+    }
 }
