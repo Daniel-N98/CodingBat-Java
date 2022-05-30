@@ -241,4 +241,23 @@ class String1Test {
         assertTrue(hasBad2);
         assertFalse(hasBad3);
     }
+
+    @Test
+    void asFirst() {
+        String str = "Hello";
+        String str2 = "H";
+        String str3 = "";
+
+        String asFirst = string1.asFirst(str);
+        String asFirst2 = string1.asFirst(str2);
+        String asFirst3 = string1.asFirst(str3);
+
+        String expected = "He";
+        String expected2 = "H@";
+        String expected3 = "@@";
+
+        assertEquals(asFirst, expected);
+        assertEquals(asFirst2, expected2);
+        assertEquals(asFirst3, expected3);
+    }
 }

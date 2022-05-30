@@ -320,4 +320,21 @@ public class String1 {
     public boolean hasBad(String str){
         return str.startsWith("bad") || str.startsWith("bad", 1);
     }
+
+    /**
+     * Given a string, return a string length 2 made of its first 2 chars.
+     * If the string length is less than 2, use '@' for the missing chars.
+     *
+     * atFirst("hello") → "he"
+     * atFirst("hi") → "hi"
+     * atFirst("h") → "h@"
+     *
+     * @param str String value
+     * @return First two characters of String parameter, or '@' in place of any missing characters.
+     */
+    public String asFirst(String str){
+        return str.length() == 0 ? "@@"
+                : str.length() == 1 ? str.charAt(0) + "@"
+                : str.substring(0, 2);
+    }
 }
