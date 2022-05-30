@@ -403,4 +403,22 @@ class String1Test {
         assertEquals(without4, "H");
 
     }
+
+    @Test
+    void deFront() {
+        String str = "Hello";
+        String str2 = "away";
+        String str3 = "ba";
+
+        String deFront = string1.deFront(str);
+        String deFront2 = string1.deFront(str2);
+        String deFront3 = string1.deFront(str3);
+
+        String expected = "llo";
+        String expected2 = "aay";
+
+        assertEquals(deFront, expected);
+        assertEquals(deFront2, expected2);
+        assertEquals(deFront3, "");
+    }
 }

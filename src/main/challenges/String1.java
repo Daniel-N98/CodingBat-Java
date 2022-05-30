@@ -518,4 +518,33 @@ public class String1 {
         }
         return str;
     }
+
+    /**
+     * Given a string, return a version without the first 2 chars.
+     * Except keep the first char if it is 'a' and keep the second char if it is 'b'.
+     * The string may be any length. Harder than it looks.
+     *
+     * deFront("Hello") → "llo"
+     * deFront("java") → "va"
+     * deFront("away") → "aay"
+     *
+     * @param str String value
+     * @return String value
+     */
+    public String deFront(String str){
+        // Get the first two characters of the String parameter
+        String firstTwo = str.substring(0,2);
+
+        // Set the first character of firstTwo to '@' if it does not equal 'a'
+        if (firstTwo.charAt(0) != 'a'){
+            firstTwo = "@" + firstTwo.charAt(1);
+        }
+        // Set the second character of firstTwo to '@' if it does not equal 'b'
+        if (firstTwo.charAt(1) != 'b'){
+            firstTwo = firstTwo.charAt(0) + "@";
+        }
+
+        // Remove the temp '@' and concat String parameter without first two characters
+        return firstTwo.replaceAll("@", "") + str.substring(2);
+    }
 }
