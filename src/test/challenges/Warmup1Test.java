@@ -183,4 +183,24 @@ class Warmup1Test {
         assertEquals(front3_2, expected2);
         assertEquals(front3_3, expected3);
     }
+
+    @Test
+    void backAround() {
+        String str = "cat";
+        String str2 = "Hello";
+        String str3 = "a";
+
+        String backAround = warmup1.backAround(str);
+        String backAround2 = warmup1.backAround(str2);
+        String backAround3 = warmup1.backAround(str3);
+
+        String expected = "tcatt";
+        String expected2 = "oHelloo";
+        String expected3 = "aaa";
+
+        assertEquals(backAround, expected);
+        assertEquals(backAround2, expected2);
+        assertEquals(backAround3, expected3
+        );
+    }
 }
