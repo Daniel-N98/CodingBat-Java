@@ -280,4 +280,21 @@ class String1Test {
         assertEquals(lastChars2, expected2);
         assertEquals(lastChars3, expected3);
     }
+
+    @Test
+    void conCat() {
+        String a = "abc";
+        String b = "cat";
+        String b2 = "hat";
+
+        String conCat = string1.conCat(a, b);
+        String conCat2 = string1.conCat(a, b2);
+
+        String expected = "abcat";
+        String expected2 = "abchat";
+
+        assertEquals(conCat, expected);
+        assertEquals(conCat2, expected2);
+
+    }
 }
