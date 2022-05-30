@@ -191,5 +191,22 @@ public class Warmup1 {
         return str.charAt(length) + str.substring(1, length) + str.charAt(0);
     }
 
+    /**
+     * Given a string, we'll say that the front is the first 3 chars of the string.
+     * If the string length is less than 3, the front is whatever is there.
+     * Return a new string which is 3 copies of the front.
+     *
+     * front3("Java") → "JavJavJav"
+     * front3("Chocolate") → "ChoChoCho"
+     * front3("abc") → "abcabcabc"
+     *
+     * @param str String value
+     * @return String parameters first 3 characters (or total characters if < 3), repeated 3 times
+     */
+    public String front3(String str) {
+        String s = str.substring(0, Math.min(str.length(), 3));
+        return s + s + s;
+    }
+
 
 }
