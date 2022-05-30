@@ -26,4 +26,15 @@ class Warmup1Test {
         assertTrue(sleepIn3);
 
     }
+
+    @Test
+    void monkeyTrouble() {
+        boolean monkeyTrouble = warmup1.monkeyTrouble(true, true); // Both smiling
+        boolean monkeyTrouble2 = warmup1.monkeyTrouble(false, false); // Both not smiling
+        boolean monkeyTrouble3 = warmup1.monkeyTrouble(true, false); // One smiling, one not smiling
+
+        assertTrue(monkeyTrouble);
+        assertTrue(monkeyTrouble2);
+        assertFalse(monkeyTrouble3);
+    }
 }
