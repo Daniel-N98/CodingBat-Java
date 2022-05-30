@@ -456,4 +456,22 @@ class String1Test {
         assertEquals(withoutX3, expected2);
 
     }
+
+    @Test
+    void withoutX2() {
+        String str = "xHi";
+        String str2 = "xHi";
+        String str3 = "Hexllo";
+
+        String withoutX2 = string1.withoutX2(str);
+        String withoutX3 = string1.withoutX2(str2);
+        String withoutX4 = string1.withoutX2(str3);
+
+        String expected = "Hi"; // str & str2 should return the same value
+        String expected2 = "Hexllo";
+
+        assertEquals(withoutX2, expected);
+        assertEquals(withoutX3, expected);
+        assertEquals(withoutX4, expected2);
+    }
 }
