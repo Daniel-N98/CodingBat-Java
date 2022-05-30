@@ -601,7 +601,7 @@ public class String1 {
      * Given a string, if one or both of the first 2 chars is 'x',
      * return the string without those 'x' chars, and otherwise return the string unchanged.
      * This is a little harder than it looks.
-     *
+     * <p>
      * withoutX2("xHi") → "Hi"
      * withoutX2("Hxi") → "Hi"
      * withoutX2("Hi") → "Hi"
@@ -609,7 +609,7 @@ public class String1 {
      * @param str String value
      * @return String parameter with 'x' character removed from first, and second element if present
      */
-    public String withoutX2(String str){
+    public String withoutX2(String str) {
         if (str.length() < 2) return str.replaceAll("x", "");
 
         String firstTwo = str.substring(0, 2);
