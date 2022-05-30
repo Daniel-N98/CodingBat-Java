@@ -84,4 +84,15 @@ class Warmup1Test {
         assertFalse(makes10_2);
         assertTrue(makes10_3);
     }
+
+    @Test
+    void nearHundred() {
+        boolean nearHundred = warmup1.nearHundred(93);
+        boolean nearHundred2 = warmup1.nearHundred(89);
+        boolean nearHundred3 = warmup1.nearHundred(210);
+
+        assertTrue(nearHundred);
+        assertFalse(nearHundred2);
+        assertTrue(nearHundred3);
+    }
 }
