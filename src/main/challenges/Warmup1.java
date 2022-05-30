@@ -243,7 +243,7 @@ public class Warmup1 {
      * Given a string, take the first 2 chars and return the string with the 2 chars added
      * at both the front and back, so "kitten" yields"kikittenki".
      * If the string length is less than 2, use whatever chars are there.
-     *
+     * <p>
      * front22("kitten") → "kikittenki"
      * front22("Ha") → "HaHaHa"
      * front22("abc") → "ababcab"
@@ -260,7 +260,7 @@ public class Warmup1 {
 
     /**
      * Given a string, return true if the string starts with "hi" and false otherwise.
-     *
+     * <p>
      * startHi("hi there") → true
      * startHi("hi") → true
      * startHi("hello hi") → false
@@ -274,7 +274,7 @@ public class Warmup1 {
 
     /**
      * Given two temperatures, return true if one is less than 0 and the other is greater than 100.
-     *
+     * <p>
      * icyHot(120, -1) → true
      * icyHot(-1, 120) → true
      * icyHot(2, 120) → false
@@ -289,7 +289,7 @@ public class Warmup1 {
 
     /**
      * Given 2 int values, return true if either of them is in the range 10..20 inclusive.
-     *
+     * <p>
      * in1020(12, 99) → true
      * in1020(21, 12) → true
      * in1020(8, 99) → false
@@ -305,7 +305,7 @@ public class Warmup1 {
     /**
      * We'll say that a number is "teen" if it is in the range 13..19 inclusive.
      * Given 3 int values, return true if 1 or more of them are teen.
-     *
+     * <p>
      * hasTeen(13, 20, 10) → true
      * hasTeen(20, 19, 10) → true
      * hasTeen(20, 10, 13) → true
@@ -316,9 +316,8 @@ public class Warmup1 {
      * @return True if any int value is in range 13..19 inclusive
      */
     public boolean hasTeen(int a, int b, int c) {
-        return ((a >= 13 && a <=19)
+        return ((a >= 13 && a <= 19)
                 || (b >= 13 && b <= 19)
                 || (c >= 13 && c <= 19));
     }
-
 }
