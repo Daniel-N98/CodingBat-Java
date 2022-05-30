@@ -250,4 +250,13 @@ class Warmup1Test {
         assertTrue(icyHot);
         assertFalse(icyHot2);
     }
+
+    @Test
+    void in1020() {
+        boolean in1020 = warmup1.in1020(12, 99);
+        boolean in1020_2 = warmup1.in1020(8, 99);
+
+        assertTrue(in1020);
+        assertFalse(in1020_2);
+    }
 }
