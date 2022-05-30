@@ -52,4 +52,20 @@ public class Warmup1 {
                 ? ( (a + b) * 2)
                 : a + b;
     }
+
+    /**
+     * Given an int n, return the absolute difference between n and 21,
+     * except return double the absolute difference if n is over 21.
+     *
+     * diff21(19) → 2
+     * diff21(10) → 11
+     * diff21(21) → 0
+     *
+     * @param n int value
+     * @return Difference between int parameter, and 21. Difference*2 if the int parameter is over 21
+     */
+    public int diff21(int n) {
+        return (n > 21 ? (n - 21) * 2 : (21 - n));
+    }
+
 }

@@ -48,4 +48,17 @@ class Warmup1Test {
         assertEquals(sumDouble2, 5);
         assertEquals(sumDouble3, 8);
     }
+
+    @Test
+    void diff21() {
+        int diff21 = warmup1.diff21(19);
+        int diff21_2 = warmup1.diff21(10);
+        int diff21_3 = warmup1.diff21(21);
+        int diff21_4 = warmup1.diff21(38);
+
+        assertEquals(diff21, 2);
+        assertEquals(diff21_2, 11);
+        assertEquals(diff21_3, 0);
+        assertEquals(diff21_4, 34);
+    }
 }
