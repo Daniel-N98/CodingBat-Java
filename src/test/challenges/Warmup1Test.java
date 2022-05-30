@@ -214,4 +214,19 @@ class Warmup1Test {
         assertTrue(or35_2);
         assertFalse(or35_3);
     }
+
+    @Test
+    void front22() {
+        String str = "kitten";
+        String str2 = "Ha";
+
+        String front22 = warmup1.front22(str);
+        String front22_2 = warmup1.front22(str2);
+
+        String expected = "kikittenki";
+        String expected2 = "HaHaHa";
+
+        assertEquals(front22, expected);
+        assertEquals(front22_2, expected2);
+    }
 }
