@@ -199,23 +199,23 @@ public class String1 {
     /**
      * Given a string, return a string length 1 from its front, unless front is false,
      * in which case return a string length 1 from its back. The string will be non-empty.
-     *
+     * <p>
      * theEnd("Hello", true) → "H"
      * theEnd("Hello", false) → "o"
      * theEnd("oh", true) → "o"
      *
-     * @param str String value
+     * @param str   String value
      * @param front Boolean value
      * @return First character of String parameter if Boolean parameter is true, last character otherwise
      */
-    public String theEnd(String str, boolean front){
-        return front ? str.substring(0, 1) : str.substring(str.length() -1);
+    public String theEnd(String str, boolean front) {
+        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
     }
 
     /**
      * Given a string, return a version without both the first and last char of the string.
      * The string may be any length, including 0.
-     *
+     * <p>
      * withouEnd2("Hello") → "ell"
      * withouEnd2("abc") → "b"
      * withouEnd2("ab") → ""
@@ -223,7 +223,7 @@ public class String1 {
      * @param str String value
      * @return String parameter without first, and last character.
      */
-    public String withouEnd(String str){
+    public String withouEnd(String str) {
         if (str.length() <= 2) return "";
 
         return str.substring(1, str.length() - 1);
@@ -232,7 +232,7 @@ public class String1 {
     /**
      * Given a string of even length, return a string made of the middle two chars,
      * so the string "string" yields "ri". The string length will be at least 2.
-     *
+     * <p>
      * middleTwo("string") → "ri"
      * middleTwo("code") → "od"
      * middleTwo("Practice") → "ct"
@@ -240,13 +240,13 @@ public class String1 {
      * @param str String value
      * @return Middle two character of the String parameter
      */
-    public String middleTwo(String str){
-        return str.substring((str.length()-1) / 2, (str.length()/2) + 1);
+    public String middleTwo(String str) {
+        return str.substring((str.length() - 1) / 2, (str.length() / 2) + 1);
     }
 
     /**
      * Given a string, return true if it ends in "ly".
-     *
+     * <p>
      * endsLy("oddly") → true
      * endsLy("y") → false
      * endsLy("oddy") → false
@@ -254,7 +254,7 @@ public class String1 {
      * @param str String value
      * @return True if str ends in 'ly', false otherwise
      */
-    public boolean endsLy(String str){
+    public boolean endsLy(String str) {
         return str.endsWith("ly");
     }
 
@@ -263,29 +263,29 @@ public class String1 {
      * The string length will be at least n.
      *
      * @param str String value
-     * @param n amount of characters from each side of String parameter
+     * @param n   amount of characters from each side of String parameter
      * @return String value made of the first and last n chars from the String parameter
      */
-    public String nTwice(String str, int n){
-        return str.substring(0, n) + str.substring(str.length()-n);
+    public String nTwice(String str, int n) {
+        return str.substring(0, n) + str.substring(str.length() - n);
     }
 
     /**
      * Given a string and an index, return a string length 2 starting at the given index.
      * If the index is too big or too small to define a string length 2, use the first 2 chars.
      * The string length will be at least 2.
-     *
+     * <p>
      * twoChar("java", 0) → "ja"
      * twoChar("java", 2) → "va"
      * twoChar("java", 3) → "ja"
      *
-     * @param str String value
+     * @param str   String value
      * @param index index to begin at
      * @return String value of length 2 containing the two characters from String parameter
-     *         starting at int parameter.
+     * starting at int parameter.
      */
-    public String twoChar(String str, int index){
-        if (index <=0 || (index + 2) > str.length()) return str.substring(0, 2);
+    public String twoChar(String str, int index) {
+        if (index <= 0 || (index + 2) > str.length()) return str.substring(0, 2);
 
         return str.substring(index, index + 2);
     }
@@ -293,7 +293,7 @@ public class String1 {
     /**
      * Given a string of odd length, return the string length 3 from its middle,
      * so "Candy" yields "and". The string length will be at least 3.
-     *
+     * <p>
      * middleThree("Candy") → "and"
      * middleThree("and") → "and"
      * middleThree("solving") → "lvi"
@@ -301,7 +301,7 @@ public class String1 {
      * @param str String value of odd length
      * @return middle three characters of String parameter
      */
-    public String middleThree(String str){
+    public String middleThree(String str) {
         int half = str.length() / 2;
         return str.substring(half - 1, half + 2);
     }
@@ -310,7 +310,7 @@ public class String1 {
      * Given a string, return true if "bad" appears starting at index 0 or 1 in the string,
      * such as with "badxxx" or "xbadxx" but not "xxbadxx".
      * The string may be any length, including 0. Note: use .equals() to compare 2 strings.
-     *
+     * <p>
      * hasBad("badxx") → true
      * hasBad("xbadxx") → true
      * hasBad("xxbadxx") → false
@@ -318,14 +318,14 @@ public class String1 {
      * @param str String value
      * @return True if 'bad' appears starting at index 0, or 1. False otherwise
      */
-    public boolean hasBad(String str){
+    public boolean hasBad(String str) {
         return str.startsWith("bad") || str.startsWith("bad", 1);
     }
 
     /**
      * Given a string, return a string length 2 made of its first 2 chars.
      * If the string length is less than 2, use '@' for the missing chars.
-     *
+     * <p>
      * atFirst("hello") → "he"
      * atFirst("hi") → "hi"
      * atFirst("h") → "h@"
@@ -333,7 +333,7 @@ public class String1 {
      * @param str String value
      * @return First two characters of String parameter, or '@' in place of any missing characters.
      */
-    public String asFirst(String str){
+    public String asFirst(String str) {
         return str.length() == 0 ? "@@"
                 : str.length() == 1 ? str.charAt(0) + "@"
                 : str.substring(0, 2);
@@ -342,7 +342,7 @@ public class String1 {
     /**
      * Given 2 strings, a and b, return a new string made of the first char of a and the last char of b,
      * so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
-     *
+     * <p>
      * lastChars("last", "chars") → "ls"
      * lastChars("yo", "java") → "ya"
      * lastChars("hi", "") → "h@"
@@ -351,8 +351,8 @@ public class String1 {
      * @param b String value
      * @return Last characters of each String, or a '@' for each last character missing
      */
-    public String lastChars(String a, String b){
-        if (a.length() < 2){
+    public String lastChars(String a, String b) {
+        if (a.length() < 2) {
             a = a + "@";
         }
 
@@ -360,14 +360,14 @@ public class String1 {
             b = b + "@";
         }
 
-        return "" + a.charAt(0) + b.charAt(b.length()-1);
+        return "" + a.charAt(0) + b.charAt(b.length() - 1);
     }
 
     /**
      * Given two strings, append them together (known as "concatenation") and return the result.
      * However, if the concatenation creates a double-char, then omit one of the chars,
      * so "abc" and "cat" yields "abcat".
-     *
+     * <p>
      * conCat("abc", "cat") → "abcat"
      * conCat("dog", "cat") → "dogcat"
      * conCat("abc", "") → "abc"
@@ -375,9 +375,9 @@ public class String1 {
      * @param a String value
      * @param b String value
      * @return Concatenated String of String parameters. If a double-char is created from the concat, one of the
-     *          chars will be omitted.
+     * chars will be omitted.
      */
-    public String conCat(String a, String b){
+    public String conCat(String a, String b) {
         if (!(b.isEmpty() || a.isEmpty())) {
             // Sets b = b without first character if b's first character == a's last character.
             if (b.charAt(0) == a.charAt(a.length() - 1)) {
