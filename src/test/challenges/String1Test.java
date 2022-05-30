@@ -421,4 +421,20 @@ class String1Test {
         assertEquals(deFront2, expected2);
         assertEquals(deFront3, "");
     }
+
+    @Test
+    void startWord() {
+        String str = "hippo";
+        String word = "hi";
+        String word2 = "xip";
+
+        String startWord = string1.startWord(str, word);
+        String startWord2 = string1.startWord(str, word2);
+
+        String expected = "hi";
+        String expected2 = "hip";
+
+        assertEquals(startWord, expected);
+        assertEquals(startWord2, expected2);
+    }
 }

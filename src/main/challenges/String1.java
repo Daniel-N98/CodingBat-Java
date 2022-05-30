@@ -547,4 +547,28 @@ public class String1 {
         // Remove the temp '@' and concat String parameter without first two characters
         return firstTwo.replaceAll("@", "") + str.substring(2);
     }
+
+    /**
+     * Given a string and a second "word" string,
+     * we'll say that the word matches the string if it appears at the front of the string,
+     * except its first char does not need to match exactly.
+     * On a match, return the front of the string, or otherwise return the empty string.
+     * So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip".
+     * The word will be at least length 1.
+     *
+     * startWord("hippo", "hi") → "hi"
+     * startWord("hippo", "xip") → "hip"
+     * startWord("hippo", "i") → "h"
+     *
+     * @param str String value
+     * @param word String value
+     * @return String value
+     */
+    public String startWord(String str, String word){
+        if (str.length() == 0) return "";
+
+        return (str.substring(1).startsWith(word.substring(1)))
+                ? str.substring(0,word.length())
+                : "";
+    }
 }
