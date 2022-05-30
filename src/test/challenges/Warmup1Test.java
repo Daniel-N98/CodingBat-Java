@@ -259,4 +259,13 @@ class Warmup1Test {
         assertTrue(in1020);
         assertFalse(in1020_2);
     }
+
+    @Test
+    void hasTeen() {
+        boolean hasTeen = warmup1.hasTeen(13, 20, 10);
+        boolean hasTeen2 = warmup1.hasTeen(11, 22, 24);
+
+        assertTrue(hasTeen);
+        assertFalse(hasTeen2);
+    }
 }
