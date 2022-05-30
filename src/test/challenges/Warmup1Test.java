@@ -95,4 +95,21 @@ class Warmup1Test {
         assertFalse(nearHundred2);
         assertTrue(nearHundred3);
     }
+
+    @Test
+    void posNeg() {
+        int a = 1;
+        int a2 = -5;
+
+        int b = -1;
+        int b2 = 6;
+
+        boolean posNeg = warmup1.posNeg(a, b, false);
+        boolean posNeg2 = warmup1.posNeg(b, a, false);
+        boolean posNeg3 = warmup1.posNeg(a2, b2, true);
+
+        assertTrue(posNeg);
+        assertTrue(posNeg2);
+        assertFalse(posNeg3);
+    }
 }
