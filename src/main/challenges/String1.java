@@ -285,7 +285,8 @@ public class String1 {
      *         starting at int parameter.
      */
     public String twoChar(String str, int index){
-        if (index <= 0 || (index + 1) > str.length()) return str.substring(0, 2);
+        if (index <=0 || (index + 2) > str.length()) return str.substring(0, 2);
+
         return str.substring(index, index + 2);
     }
 
@@ -336,5 +337,29 @@ public class String1 {
         return str.length() == 0 ? "@@"
                 : str.length() == 1 ? str.charAt(0) + "@"
                 : str.substring(0, 2);
+    }
+
+    /**
+     * Given 2 strings, a and b, return a new string made of the first char of a and the last char of b,
+     * so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+     *
+     * lastChars("last", "chars") → "ls"
+     * lastChars("yo", "java") → "ya"
+     * lastChars("hi", "") → "h@"
+     *
+     * @param a String value
+     * @param b String value
+     * @return Last characters of each String, or a '@' for each last character missing
+     */
+    public String lastChars(String a, String b){
+        if (a.length() < 2){
+            a = a + "@";
+        }
+
+        if (b.length() < 2) {
+            b = b + "@";
+        }
+
+        return "" + a.charAt(0) + b.charAt(b.length()-1);
     }
 }

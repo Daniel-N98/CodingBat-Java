@@ -260,4 +260,24 @@ class String1Test {
         assertEquals(asFirst2, expected2);
         assertEquals(asFirst3, expected3);
     }
+
+    @Test
+    void lastChars() {
+        String a = "last";
+        String b = "chars";
+        String a2 = "hi";
+        String b2 = "";
+
+        String lastChars = string1.lastChars(a, b); // Both have last characters
+        String lastChars2 = string1.lastChars(a2, b2); // a2 has last character, b2 is empty String
+        String lastChars3 = string1.lastChars(b2, b2); // both are empty Strings
+
+        String expected = "ls";
+        String expected2 = "h@";
+        String expected3 = "@@";
+
+        assertEquals(lastChars, expected);
+        assertEquals(lastChars2, expected2);
+        assertEquals(lastChars3, expected3);
+    }
 }
