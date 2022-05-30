@@ -241,4 +241,13 @@ class Warmup1Test {
         assertTrue(startHi);
         assertFalse(startHi2);
     }
+
+    @Test
+    void icyHot() {
+        boolean icyHot = warmup1.icyHot(120, -1);
+        boolean icyHot2 = warmup1.icyHot(2, 120);
+
+        assertTrue(icyHot);
+        assertFalse(icyHot2);
+    }
 }
