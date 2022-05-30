@@ -387,4 +387,23 @@ public class String1 {
 
         return a + b;
     }
+
+    /**
+     * Given a string of any length, return a new string where the last 2 chars, if present,
+     * are swapped, so "coding" yields "codign".
+     * <p>
+     * lastTwo("coding") → "codign"
+     * lastTwo("cat") → "cta"
+     * lastTwo("ab") → "ba"
+     *
+     * @param str String value
+     * @return String parameter with last two characters swapped, if present.
+     */
+    public String lastTwo(String str) {
+        if (str.length() < 2) return str;
+
+        int length = str.length();
+
+        return str.substring(0, length - 2) + str.charAt(length - 1) + str.charAt(length - 2);
+    }
 }

@@ -295,6 +295,20 @@ class String1Test {
 
         assertEquals(conCat, expected);
         assertEquals(conCat2, expected2);
+    }
 
+    @Test
+    void lastTwo() {
+        String str = "coding";
+        String str2 = "a";
+
+        String lastTwo = string1.lastTwo(str);
+        String lastTwo2 = string1.lastTwo(str2);
+
+        String expected = "codign";
+        String expected2 = "a";
+
+        assertEquals(lastTwo, expected);
+        assertEquals(lastTwo2, expected2);
     }
 }
