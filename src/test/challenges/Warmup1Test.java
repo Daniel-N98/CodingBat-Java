@@ -297,4 +297,19 @@ class Warmup1Test {
         assertEquals(delDel2, expected2);
         assertEquals(delDel3, str3);
     }
+
+    @Test
+    void mixStart() {
+        String str = "mix snacks";
+        String str2 = "pix snacks";
+        String str3 = "piz snacks";
+
+        boolean mixStart = warmup1.mixStart(str);
+        boolean mixStart2 = warmup1.mixStart(str2);
+        boolean mixStart3 = warmup1.mixStart(str3);
+
+        assertTrue(mixStart);
+        assertTrue(mixStart2);
+        assertFalse(mixStart3);
+    }
 }

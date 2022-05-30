@@ -361,5 +361,18 @@ public class Warmup1 {
         return str;
     }
 
-
+    /**
+     * Return true if the given string begins with "mix", except the 'm' can be anything,
+     * so "pix", "9ix" ... all count.
+     *
+     * mixStart("mix snacks") → true
+     * mixStart("pix snacks") → true
+     * mixStart("piz snacks") → false
+     *
+     * @param str String value
+     * @return True if the second and third characters are "ix"
+     */
+    public boolean mixStart(String str) {
+        return str.length() >= 3 && str.startsWith("ix", 1);
+    }
 }
