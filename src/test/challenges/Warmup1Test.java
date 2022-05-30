@@ -61,4 +61,16 @@ class Warmup1Test {
         assertEquals(diff21_3, 0);
         assertEquals(diff21_4, 34);
     }
+
+    @Test
+    void parrotTrouble() {
+        boolean parrotTrouble = warmup1.parrotTrouble(true, 6);
+        boolean parrotTrouble2 = warmup1.parrotTrouble(false, 7);
+        boolean parrotTrouble3 = warmup1.parrotTrouble(true, 20);
+
+        assertTrue(parrotTrouble);
+        assertFalse(parrotTrouble2);
+        assertFalse(parrotTrouble3);
+
+    }
 }
