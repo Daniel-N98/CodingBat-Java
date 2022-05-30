@@ -174,5 +174,22 @@ public class Warmup1 {
         return (str.substring(0, n) + str.substring(n + 1));
     }
 
+    /**
+     * Given a string, return a new string where the first and last chars have been exchanged.
+     *
+     * frontBack("code") → "eodc"
+     * frontBack("a") → "a"
+     * frontBack("ab") → "ba"
+     *
+     * @param str String value
+     * @return String parameter with the first & last characters switched
+     */
+    public String frontBack(String str) {
+        if (str.length() <= 1) return str;
+        int length = str.length() - 1;
+
+        return str.charAt(length) + str.substring(1, length) + str.charAt(0);
+    }
+
 
 }

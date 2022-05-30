@@ -145,4 +145,23 @@ class Warmup1Test {
         assertEquals(missingChar2, expected2);
         assertEquals(missingChar3, expected3);
     }
+
+    @Test
+    void frontBack() {
+        String str = "code";
+        String str2 = "a";
+        String str3 = "ab";
+
+        String frontBack = warmup1.frontBack(str);
+        String frontBack2 = warmup1.frontBack(str2);
+        String frontBack3 = warmup1.frontBack(str3);
+
+        String expected = "eodc";
+        String expected2 = "a";
+        String expected3 = "ba";
+
+        assertEquals(frontBack, expected);
+        assertEquals(frontBack2, expected2);
+        assertEquals(frontBack3, expected3);
+    }
 }
