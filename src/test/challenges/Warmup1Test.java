@@ -37,4 +37,15 @@ class Warmup1Test {
         assertTrue(monkeyTrouble2);
         assertFalse(monkeyTrouble3);
     }
+
+    @Test
+    void sumDouble() {
+        int sumDouble = warmup1.sumDouble(1, 2);
+        int sumDouble2 = warmup1.sumDouble(3, 2);
+        int sumDouble3 = warmup1.sumDouble(2, 2);
+
+        assertEquals(sumDouble, 3);
+        assertEquals(sumDouble2, 5);
+        assertEquals(sumDouble3, 8);
+    }
 }
