@@ -203,4 +203,15 @@ class Warmup1Test {
         assertEquals(backAround3, expected3
         );
     }
+
+    @Test
+    void or35() {
+        boolean or35 = warmup1.or35(3);
+        boolean or35_2 = warmup1.or35(10);
+        boolean or35_3 = warmup1.or35(8);
+
+        assertTrue(or35);
+        assertTrue(or35_2);
+        assertFalse(or35_3);
+    }
 }
