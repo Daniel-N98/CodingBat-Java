@@ -359,4 +359,15 @@ class Warmup1Test {
         assertFalse(in3050_1);
         assertTrue(in3050_2);
     }
+
+    @Test
+    void max1020() {
+        int max1020 = warmup1.max1020(11, 19);
+        int max1020_2 = warmup1.max1020(9, 21);
+        int max1020_3 = warmup1.max1020(24, 11);
+
+        assertEquals(19, max1020);
+        assertEquals(0, max1020_2);
+        assertEquals(11, max1020_3);
+    }
 }
