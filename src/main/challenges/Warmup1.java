@@ -364,7 +364,7 @@ public class Warmup1 {
     /**
      * Return true if the given string begins with "mix", except the 'm' can be anything,
      * so "pix", "9ix" ... all count.
-     *
+     * <p>
      * mixStart("mix snacks") → true
      * mixStart("pix snacks") → true
      * mixStart("piz snacks") → false
@@ -380,7 +380,7 @@ public class Warmup1 {
      * Given a string, return a string made of the first 2 chars (if present),
      * however include first char only if it is 'o' and include the second only if it is 'z',
      * so "ozymandias" yields "oz".
-     *
+     * <p>
      * startOz("ozymandias") → "oz"
      * startOz("bzoo") → "z"
      * startOz("oxx") → "o"
@@ -400,7 +400,7 @@ public class Warmup1 {
 
     /**
      * Given three int values, a b c, return the largest.
-     *
+     * <p>
      * intMax(1, 2, 3) → 3
      * intMax(1, 3, 2) → 3
      * intMax(3, 2, 1) → 3
@@ -420,7 +420,7 @@ public class Warmup1 {
      * Given 2 int values, return whichever value is nearest to the value 10,
      * or return 0 in the event of a tie.
      * Note that Math.abs(n) returns the absolute value of a number.
-     *
+     * <p>
      * close10(8, 13) → 8
      * close10(13, 8) → 8
      * close10(13, 7) → 0
