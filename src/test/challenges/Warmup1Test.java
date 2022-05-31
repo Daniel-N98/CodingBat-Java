@@ -44,9 +44,9 @@ class Warmup1Test {
         int sumDouble2 = warmup1.sumDouble(3, 2);
         int sumDouble3 = warmup1.sumDouble(2, 2);
 
-        assertEquals(sumDouble, 3);
-        assertEquals(sumDouble2, 5);
-        assertEquals(sumDouble3, 8);
+        assertEquals(3, sumDouble);
+        assertEquals(5, sumDouble2);
+        assertEquals(8, sumDouble3);
     }
 
     @Test
@@ -56,10 +56,10 @@ class Warmup1Test {
         int diff21_3 = warmup1.diff21(21);
         int diff21_4 = warmup1.diff21(38);
 
-        assertEquals(diff21, 2);
-        assertEquals(diff21_2, 11);
-        assertEquals(diff21_3, 0);
-        assertEquals(diff21_4, 34);
+        assertEquals(2, diff21);
+        assertEquals(11, diff21_2);
+        assertEquals(0, diff21_3);
+        assertEquals(34, diff21_4);
     }
 
     @Test
@@ -124,8 +124,8 @@ class Warmup1Test {
 
         String expected = "not candy";
 
-        assertEquals(notString, expected);
-        assertEquals(notString2, str2); // str2 should remain unchanged
+        assertEquals(expected, notString);
+        assertEquals(str2, notString2); // str2 should remain unchanged
 
     }
 
@@ -141,9 +141,9 @@ class Warmup1Test {
         String expected2 = "itten";
         String expected3 = "kittn";
 
-        assertEquals(missingChar, expected);
-        assertEquals(missingChar2, expected2);
-        assertEquals(missingChar3, expected3);
+        assertEquals(expected, missingChar);
+        assertEquals(expected2, missingChar2);
+        assertEquals(expected3, missingChar3);
     }
 
     @Test
@@ -160,9 +160,9 @@ class Warmup1Test {
         String expected2 = "a";
         String expected3 = "ba";
 
-        assertEquals(frontBack, expected);
-        assertEquals(frontBack2, expected2);
-        assertEquals(frontBack3, expected3);
+        assertEquals(expected, frontBack);
+        assertEquals(expected2, frontBack2);
+        assertEquals(expected3, frontBack3);
     }
 
     @Test
@@ -179,9 +179,9 @@ class Warmup1Test {
         String expected2 = "ChoChoCho";
         String expected3 = "ababab";
 
-        assertEquals(front3, expected);
-        assertEquals(front3_2, expected2);
-        assertEquals(front3_3, expected3);
+        assertEquals(expected, front3);
+        assertEquals(expected2, front3_2);
+        assertEquals(expected3, front3_3);
     }
 
     @Test
@@ -198,10 +198,9 @@ class Warmup1Test {
         String expected2 = "oHelloo";
         String expected3 = "aaa";
 
-        assertEquals(backAround, expected);
-        assertEquals(backAround2, expected2);
-        assertEquals(backAround3, expected3
-        );
+        assertEquals(expected, backAround);
+        assertEquals(expected2, backAround2);
+        assertEquals(expected3, backAround3);
     }
 
     @Test
@@ -226,8 +225,8 @@ class Warmup1Test {
         String expected = "kikittenki";
         String expected2 = "HaHaHa";
 
-        assertEquals(front22, expected);
-        assertEquals(front22_2, expected2);
+        assertEquals(expected, front22);
+        assertEquals(expected2, front22_2);
     }
 
     @Test
@@ -293,9 +292,9 @@ class Warmup1Test {
         String expected = "abc";
         String expected2 = "aHello";
 
-        assertEquals(delDel, expected);
-        assertEquals(delDel2, expected2);
-        assertEquals(delDel3, str3);
+        assertEquals(expected, delDel);
+        assertEquals(expected2, delDel2);
+        assertEquals(str3, delDel3);
     }
 
     @Test
@@ -323,9 +322,9 @@ class Warmup1Test {
         String startOz2 = warmup1.startOz(str2);
         String startOz3 = warmup1.startOz(str3);
 
-        assertEquals(startOz, "oz");
-        assertEquals(startOz2, "z");
-        assertEquals(startOz3, "o");
+        assertEquals("oz", startOz);
+        assertEquals("z", startOz2);
+        assertEquals("o", startOz3);
     }
 
     @Test
@@ -334,9 +333,9 @@ class Warmup1Test {
         int intMax2 = warmup1.intMax(-3, -1, -2);
         int intMax3 = warmup1.intMax(50, 20, 0);
 
-        assertEquals(intMax, 3);
-        assertEquals(intMax2, -1);
-        assertEquals(intMax3, 50);
+        assertEquals(3, intMax);
+        assertEquals(-1, intMax2);
+        assertEquals(50, intMax3);
     }
 
     @Test
@@ -345,8 +344,8 @@ class Warmup1Test {
         int close10_2  = warmup1.close10(14, 6);
         int close10_3  = warmup1.close10(11, 10);
 
-        assertEquals(close10, 8);
-        assertEquals(close10_2, 0);
-        assertEquals(close10_3, 10);
+        assertEquals(8, close10);
+        assertEquals(0, close10_2);
+        assertEquals(10, close10_3);
     }
 }
