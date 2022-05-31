@@ -348,4 +348,15 @@ class Warmup1Test {
         assertEquals(0, close10_2);
         assertEquals(10, close10_3);
     }
+
+    @Test
+    void in3050() {
+        boolean in3050 = warmup1.in3050(30, 31);
+        boolean in3050_1 = warmup1.in3050(50, 39);
+        boolean in3050_2 = warmup1.in3050(49, 48);
+
+        assertTrue(in3050);
+        assertFalse(in3050_1);
+        assertTrue(in3050_2);
+    }
 }
