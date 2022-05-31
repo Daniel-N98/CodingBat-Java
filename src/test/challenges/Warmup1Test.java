@@ -327,4 +327,15 @@ class Warmup1Test {
         assertEquals(startOz2, "z");
         assertEquals(startOz3, "o");
     }
+
+    @Test
+    void intMax() {
+        int intMax = warmup1.intMax(1, 2, 3);
+        int intMax2 = warmup1.intMax(-3, -1, -2);
+        int intMax3 = warmup1.intMax(50, 20, 0);
+
+        assertEquals(intMax, 3);
+        assertEquals(intMax2, -1);
+        assertEquals(intMax3, 50);
+    }
 }
