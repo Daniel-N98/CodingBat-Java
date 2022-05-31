@@ -1,7 +1,5 @@
 package challenges;
 
-import java.util.Arrays;
-
 public class Warmup1 {
 
     /**
