@@ -415,4 +415,21 @@ class Warmup1Test {
         assertEquals(expected2, endUp2);
         assertEquals(expected3, endUp3);
     }
+
+    @Test
+    void everyNth() {
+        String str = "Miracle";
+        String str2 = "Chocolates";
+        int n = 2;
+        int n2 = 4;
+
+        String everyNth = warmup1.everyNth(str, n);
+        String everyNth2 = warmup1.everyNth(str2, n2);
+
+        String expected = "Mrce";
+        String expected2 = "Coe";
+
+        assertEquals(expected, everyNth);
+        assertEquals(expected2, everyNth2);
+    }
 }
