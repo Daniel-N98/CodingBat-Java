@@ -338,4 +338,15 @@ class Warmup1Test {
         assertEquals(intMax2, -1);
         assertEquals(intMax3, 50);
     }
+
+    @Test
+    void close10() {
+        int close10  = warmup1.close10(8, 13);
+        int close10_2  = warmup1.close10(14, 6);
+        int close10_3  = warmup1.close10(11, 10);
+
+        assertEquals(close10, 8);
+        assertEquals(close10_2, 0);
+        assertEquals(close10_3, 10);
+    }
 }
