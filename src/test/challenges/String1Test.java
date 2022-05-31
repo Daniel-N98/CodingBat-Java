@@ -18,7 +18,7 @@ class String1Test {
         String name = "Bob";
         String greeting = string1.helloName(name);
 
-        assertEquals(greeting, "Hello Bob!");
+        assertEquals("Hello Bob!", greeting);
     }
 
     @Test
@@ -28,7 +28,7 @@ class String1Test {
 
         String makeAbba = string1.makeAbba(a, b);
 
-        assertEquals(makeAbba, a + b + b + a);
+        assertEquals(a + b + b + a, makeAbba);
     }
 
     @Test
@@ -39,7 +39,7 @@ class String1Test {
         String makeTags = string1.makeTags(tag, word);
         String expected = "<" + tag + ">" + word + "</" + tag + ">";
 
-        assertEquals(makeTags, expected);
+        assertEquals(expected, makeTags);
     }
 
     @Test
@@ -50,7 +50,7 @@ class String1Test {
         String makeOutWord = string1.makeOutWord(out, word);
         String expected = "<<WooHoo>>";
 
-        assertEquals(makeOutWord, expected);
+        assertEquals(expected, makeOutWord);
     }
 
     @Test
@@ -60,7 +60,7 @@ class String1Test {
         String extraEnd = string1.extraEnd(str);
         String expected = "lololo"; // Last two characters of "Hello" repeated 3 times
 
-        assertEquals(extraEnd, expected);
+        assertEquals(expected, extraEnd);
     }
 
     @Test
@@ -70,7 +70,7 @@ class String1Test {
         String firstTwo = string1.firstTwo(str);
         String expected = "ab";
 
-        assertEquals(firstTwo, expected);
+        assertEquals(expected, firstTwo);
     }
 
     @Test
@@ -80,7 +80,7 @@ class String1Test {
         String firstHalf = string1.firstHalf(str);
         String expected = "Hello";
 
-        assertEquals(firstHalf, expected);
+        assertEquals(expected, firstHalf);
     }
 
     @Test
@@ -90,7 +90,7 @@ class String1Test {
         String withoutEnd = string1.withoutEnd(str);
         String expected = "av";
 
-        assertEquals(withoutEnd, expected);
+        assertEquals(expected, withoutEnd);
     }
 
     @Test
@@ -101,7 +101,7 @@ class String1Test {
         String comboString = string1.comboString(a, b);
         String expected = "baaab";
 
-        assertEquals(comboString, expected);
+        assertEquals(expected, comboString);
     }
 
     @Test
@@ -112,7 +112,7 @@ class String1Test {
         String nonStart = string1.nonStart(a, b);
         String expected = "avaode";
 
-        assertEquals(nonStart, expected);
+        assertEquals(expected, nonStart);
     }
 
     @Test
@@ -122,7 +122,7 @@ class String1Test {
         String left2 = string1.left2(str);
         String expected = "vaja";
 
-        assertEquals(left2, expected);
+        assertEquals(expected, left2);
     }
 
     @Test
@@ -132,7 +132,7 @@ class String1Test {
         String right2 = string1.right2(str);
         String expected = "vaJa";
 
-        assertEquals(right2, expected);
+        assertEquals(expected, right2);
     }
 
     @Test
@@ -145,8 +145,8 @@ class String1Test {
         String expectedTrue = "H"; // First character of str
         String expectedFalse = "o"; // Last character of str
 
-        assertEquals(frontTrue, expectedTrue);
-        assertEquals(frontFalse, expectedFalse);
+        assertEquals(expectedTrue, frontTrue);
+        assertEquals(expectedFalse, frontFalse);
     }
 
     @Test
@@ -159,8 +159,8 @@ class String1Test {
 
         String expected = "ell";
 
-        assertEquals(withouEnd, expected);
-        assertEquals(withouEnd2, "");
+        assertEquals(expected, withouEnd);
+        assertEquals("", withouEnd2);
     }
 
     @Test
@@ -170,7 +170,7 @@ class String1Test {
         String middleTwo = string1.middleTwo(str);
         String expected = "ct";
 
-        assertEquals(middleTwo, expected);
+        assertEquals(expected, middleTwo);
     }
 
     @Test
@@ -193,7 +193,7 @@ class String1Test {
         String nTwice = string1.nTwice(str, n);
         String expected = "Choate";
 
-        assertEquals(nTwice, expected);
+        assertEquals(expected, nTwice);
     }
 
     @Test
@@ -208,8 +208,8 @@ class String1Test {
         String expected = "va";
         String expected2 = "ja";
 
-        assertEquals(twoChar, expected);
-        assertEquals(twoChar2, expected2);
+        assertEquals(expected, twoChar);
+        assertEquals(expected2, twoChar2);
     }
 
     @Test
@@ -223,8 +223,8 @@ class String1Test {
         String expected = "and";
         String expected2 = "lvi";
 
-        assertEquals(middleThree, expected);
-        assertEquals(middleThree2, expected2);
+        assertEquals(expected, middleThree);
+        assertEquals(expected2, middleThree2);
     }
 
     @Test
@@ -256,9 +256,9 @@ class String1Test {
         String expected2 = "H@";
         String expected3 = "@@";
 
-        assertEquals(asFirst, expected);
-        assertEquals(asFirst2, expected2);
-        assertEquals(asFirst3, expected3);
+        assertEquals(expected, asFirst);
+        assertEquals(expected2, asFirst2);
+        assertEquals(expected3, asFirst3);
     }
 
     @Test
@@ -276,9 +276,9 @@ class String1Test {
         String expected2 = "h@";
         String expected3 = "@@";
 
-        assertEquals(lastChars, expected);
-        assertEquals(lastChars2, expected2);
-        assertEquals(lastChars3, expected3);
+        assertEquals(expected, lastChars);
+        assertEquals(expected2, lastChars2);
+        assertEquals(expected3, lastChars3);
     }
 
     @Test
@@ -293,8 +293,8 @@ class String1Test {
         String expected = "abcat";
         String expected2 = "abchat";
 
-        assertEquals(conCat, expected);
-        assertEquals(conCat2, expected2);
+        assertEquals(expected, conCat);
+        assertEquals(expected2, conCat2);
     }
 
     @Test
@@ -308,8 +308,8 @@ class String1Test {
         String expected = "codign";
         String expected2 = "a";
 
-        assertEquals(lastTwo, expected);
-        assertEquals(lastTwo2, expected2);
+        assertEquals(expected, lastTwo);
+        assertEquals(expected2, lastTwo2);
     }
 
     @Test
@@ -326,9 +326,9 @@ class String1Test {
         String expected2 = "";
         String expected3 = "blue";
 
-        assertEquals(seeColor, expected);
-        assertEquals(seeColor2, expected2);
-        assertEquals(seeColor3, expected3);
+        assertEquals(expected, seeColor);
+        assertEquals(expected2, seeColor2);
+        assertEquals(expected3, seeColor3);
 
 
     }
@@ -361,8 +361,8 @@ class String1Test {
         String expected = "loHi";
         String expected2 = "elloJava";
 
-        assertEquals(minCat, expected);
-        assertEquals(minCat2, expected2);
+        assertEquals(expected, minCat);
+        assertEquals(expected2, minCat2);
     }
 
     @Test
@@ -377,9 +377,9 @@ class String1Test {
         String expected = "HeHeHe";
         String expected2 = "ababab";
 
-        assertEquals(extraFront, expected);
-        assertEquals(extraFront2, expected2);
-        assertEquals(extraFront3, "");
+        assertEquals(expected, extraFront);
+        assertEquals(expected2, extraFront2);
+        assertEquals("", extraFront3);
     }
 
     @Test
@@ -397,10 +397,10 @@ class String1Test {
         String expected = "lloHe";
         String expected2 = "HelloHi";
 
-        assertEquals(without, expected);
-        assertEquals(without2, expected2);
-        assertEquals(without3, "");
-        assertEquals(without4, "H");
+        assertEquals(expected, without);
+        assertEquals(expected2, without2);
+        assertEquals("", without3);
+        assertEquals("H", without4);
 
     }
 
@@ -417,9 +417,9 @@ class String1Test {
         String expected = "llo";
         String expected2 = "aay";
 
-        assertEquals(deFront, expected);
-        assertEquals(deFront2, expected2);
-        assertEquals(deFront3, "");
+        assertEquals(expected, deFront);
+        assertEquals(expected2, deFront2);
+        assertEquals("", deFront3);
     }
 
     @Test
@@ -434,8 +434,8 @@ class String1Test {
         String expected = "hi";
         String expected2 = "hip";
 
-        assertEquals(startWord, expected);
-        assertEquals(startWord2, expected2);
+        assertEquals(expected, startWord);
+        assertEquals(expected2, startWord2);
     }
 
     @Test
@@ -451,9 +451,9 @@ class String1Test {
         String expected = "Hi"; // str & str2 should return the same value
         String expected2 = "Hxi";
 
-        assertEquals(withoutX, expected);
-        assertEquals(withoutX2, expected);
-        assertEquals(withoutX3, expected2);
+        assertEquals(expected, withoutX);
+        assertEquals(expected, withoutX2);
+        assertEquals(expected2, withoutX3);
 
     }
 
@@ -470,8 +470,8 @@ class String1Test {
         String expected = "Hi"; // str & str2 should return the same value
         String expected2 = "Hexllo";
 
-        assertEquals(withoutX2, expected);
-        assertEquals(withoutX3, expected);
-        assertEquals(withoutX4, expected2);
+        assertEquals(expected, withoutX2);
+        assertEquals(expected, withoutX3);
+        assertEquals(expected2, withoutX4);
     }
 }
