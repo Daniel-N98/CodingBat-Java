@@ -385,4 +385,15 @@ class Warmup1Test {
         assertFalse(stringE2);
         assertFalse(stringE3);
     }
+
+    @Test
+    void lastDigit() {
+        boolean lastDigit = warmup1.lastDigit(7, 17);
+        boolean lastDigit2 = warmup1.lastDigit(114, 113);
+        boolean lastDigit3 = warmup1.lastDigit(99, 9);
+
+        assertTrue(lastDigit);
+        assertFalse(lastDigit2);
+        assertTrue(lastDigit3);
+    }
 }
