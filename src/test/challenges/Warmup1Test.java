@@ -312,4 +312,19 @@ class Warmup1Test {
         assertTrue(mixStart2);
         assertFalse(mixStart3);
     }
+
+    @Test
+    void startOz() {
+        String str = "ozymandias";
+        String str2 = "bzoo";
+        String str3 = "oxx";
+
+        String startOz = warmup1.startOz(str);
+        String startOz2 = warmup1.startOz(str2);
+        String startOz3 = warmup1.startOz(str3);
+
+        assertEquals(startOz, "oz");
+        assertEquals(startOz2, "z");
+        assertEquals(startOz3, "o");
+    }
 }

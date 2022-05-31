@@ -375,4 +375,27 @@ public class Warmup1 {
     public boolean mixStart(String str) {
         return str.length() >= 3 && str.startsWith("ix", 1);
     }
+
+    /**
+     * Given a string, return a string made of the first 2 chars (if present),
+     * however include first char only if it is 'o' and include the second only if it is 'z',
+     * so "ozymandias" yields "oz".
+     *
+     * startOz("ozymandias") → "oz"
+     * startOz("bzoo") → "z"
+     * startOz("oxx") → "o"
+     *
+     * @param str String value
+     * @return First and or second character of String parameter when first == 'o' && second == 'z'
+     */
+    public String startOz(String str) {
+        String s = "";
+
+        if (str.startsWith("oz")) return "oz";
+        if (str.startsWith("o")) s += "o";
+        if (str.startsWith("z", 1)) s += "z";
+
+        return s;
+    }
+
 }
