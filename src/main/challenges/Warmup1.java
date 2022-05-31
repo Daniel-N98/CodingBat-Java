@@ -445,7 +445,7 @@ public class Warmup1 {
     /**
      * Given 2 int values, return true if they are both in the range 30..40 inclusive,
      * or they are both in the range 40..50 inclusive.
-     *
+     * <p>
      * in3050(30, 31) → true
      * in3050(30, 41) → false
      * in3050(40, 50) → true
@@ -466,7 +466,7 @@ public class Warmup1 {
     /**
      * Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
      * or return 0 if neither is in that range.
-     *
+     * <p>
      * max1020(11, 19) → 19
      * max1020(19, 11) → 19
      * max1020(11, 9) → 11
@@ -476,7 +476,7 @@ public class Warmup1 {
      * @return Biggest of the two int parameters that is in range 10..20 inclusive
      */
     public int max1020(int a, int b) {
-        if ((a >= 10 && a <= 20)){
+        if ((a >= 10 && a <= 20)) {
             return (b >= 10 && b <= 20)
                     ? Math.max(a, b)
                     : a;
@@ -486,7 +486,7 @@ public class Warmup1 {
 
     /**
      * Return true if the given string contains between 1 and 3 'e' chars.
-     *
+     * <p>
      * stringE("Hello") → true
      * stringE("Heelle") → true
      * stringE("Heelele") → false
@@ -503,7 +503,7 @@ public class Warmup1 {
      * Given two non-negative int values, return true if they have the same last digit,
      * such as with 27 and 57. Note that the % "mod" operator computes remainders,
      * so 17 % 10 is 7.
-     *
+     * <p>
      * lastDigit(7, 17) → true
      * lastDigit(6, 17) → false
      * lastDigit(3, 113) → true
@@ -520,7 +520,7 @@ public class Warmup1 {
      * Given a string, return a new string where the last 3 chars are now in upper case.
      * If the string has less than 3 chars, uppercase whatever is there.
      * Note that str.toUpperCase() returns the uppercase version of a string.
-     *
+     * <p>
      * endUp("Hello") → "HeLLO"
      * endUp("hi there") → "hi thERE"
      * endUp("hi") → "HI"
@@ -539,23 +539,21 @@ public class Warmup1 {
      * Given a non-empty string and an int N, return the string made starting with char 0,
      * and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on.
      * N is 1 or more.
-     *
+     * <p>
      * everyNth("Miracle", 2) → "Mrce"
      * everyNth("abcdefg", 2) → "aceg"
      * everyNth("abcdefg", 3) → "adg"
      *
      * @param str String value
-     * @param n int value
+     * @param n   int value
      * @return String made starting at String parameter index 0, and then every Nth character
      */
     public String everyNth(String str, int n) {
         StringBuilder s = new StringBuilder();
 
-        for (int i = 0; i < str.length(); i += n){
+        for (int i = 0; i < str.length(); i += n) {
             s.append(str.toCharArray()[i]);
-
         }
         return s.toString();
     }
-
 }
