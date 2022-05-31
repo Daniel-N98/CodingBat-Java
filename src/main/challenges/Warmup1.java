@@ -1,5 +1,7 @@
 package challenges;
 
+import java.util.Arrays;
+
 public class Warmup1 {
 
     /**
@@ -482,5 +484,19 @@ public class Warmup1 {
         return b >= 10 && b <= 20 ? b : 0;
     }
 
+    /**
+     * Return true if the given string contains between 1 and 3 'e' chars.
+     *
+     * stringE("Hello") → true
+     * stringE("Heelle") → true
+     * stringE("Heelele") → false
+     *
+     * @param str String value
+     * @return True if String parameter contains between 1 and 3 'e' characters
+     */
+    public boolean stringE(String str) {
+        int amount = str.chars().filter(ch -> ch == 'e').toArray().length;
+        return amount >= 1 && amount <= 3;
+    }
 
 }

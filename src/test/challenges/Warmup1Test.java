@@ -370,4 +370,19 @@ class Warmup1Test {
         assertEquals(0, max1020_2);
         assertEquals(11, max1020_3);
     }
+
+    @Test
+    void stringE() {
+        String str = "Hello";
+        String str2 = "Heelele";
+        String str3 = "Hii";
+
+        boolean stringE = warmup1.stringE(str);
+        boolean stringE2 = warmup1.stringE(str2);
+        boolean stringE3 = warmup1.stringE(str3);
+
+        assertTrue(stringE);
+        assertFalse(stringE2);
+        assertFalse(stringE3);
+    }
 }
