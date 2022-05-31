@@ -396,4 +396,23 @@ class Warmup1Test {
         assertFalse(lastDigit2);
         assertTrue(lastDigit3);
     }
+
+    @Test
+    void endUp() {
+        String str = "HeLLO";
+        String str2 = "xyz12";
+        String str3 = "woo hoo";
+
+        String endUp = warmup1.endUp(str);
+        String endUp2 = warmup1.endUp(str2);
+        String endUp3 = warmup1.endUp(str3);
+
+        // str variable will not change
+        String expected2 = "xyZ12";
+        String expected3 = "woo HOO";
+
+        assertEquals(str, endUp);
+        assertEquals(expected2, endUp2);
+        assertEquals(expected3, endUp3);
+    }
 }

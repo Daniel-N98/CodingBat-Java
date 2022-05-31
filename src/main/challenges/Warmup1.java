@@ -516,5 +516,25 @@ public class Warmup1 {
         return (a % 10) == (b % 10);
     }
 
+    /**
+     * Given a string, return a new string where the last 3 chars are now in upper case.
+     * If the string has less than 3 chars, uppercase whatever is there.
+     * Note that str.toUpperCase() returns the uppercase version of a string.
+     *
+     * endUp("Hello") → "HeLLO"
+     * endUp("hi there") → "hi thERE"
+     * endUp("hi") → "HI"
+     *
+     * @param str String value
+     * @return String parameter with the last 3 characters replaced with their uppercase character
+     */
+    public String endUp(String str) {
+        int length = str.length();
+        if (length <= 3) return str.toUpperCase();
+
+        return str.substring(0, length - 3) + str.substring(length - 3).toUpperCase();
+    }
+
+
 
 }
