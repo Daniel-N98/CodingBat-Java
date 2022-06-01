@@ -101,4 +101,19 @@ class Array1Test {
         assertArrayEquals(expected2, rotateLeft3_2);
         assertArrayEquals(expected3, rotateLeft3_3);
     }
+
+    @Test
+    void reverse3() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {5, 11, 9};
+
+        int[] reverse3 = array1.reverse3(nums);
+        int[] reverse3_2 = array1.reverse3(nums2);
+
+        int[] expected = {3, 2, 1};
+        int[] expected2 = {9, 11, 5};
+
+        assertArrayEquals(expected, reverse3);
+        assertArrayEquals(expected2, reverse3_2);
+    }
 }
