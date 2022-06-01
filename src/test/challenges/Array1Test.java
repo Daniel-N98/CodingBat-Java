@@ -82,4 +82,23 @@ class Array1Test {
         assertEquals(18, sum3_2);
         assertEquals(2, sum3_3);
     }
+
+    @Test
+    void rotateLeft3() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {7, 0, 0};
+        int[] nums3 = {0, 4, 9};
+
+        int[] rotateLeft3 = array1.rotateLeft3(nums);
+        int[] rotateLeft3_2 = array1.rotateLeft3(nums2);
+        int[] rotateLeft3_3 = array1.rotateLeft3(nums3);
+
+        int[] expected = {2, 3, 1};
+        int[] expected2 = {0, 0, 7};
+        int[] expected3 = {4, 9, 0};
+
+        assertArrayEquals(expected, rotateLeft3);
+        assertArrayEquals(expected2, rotateLeft3_2);
+        assertArrayEquals(expected3, rotateLeft3_3);
+    }
 }
