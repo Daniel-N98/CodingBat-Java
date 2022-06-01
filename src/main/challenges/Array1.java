@@ -32,4 +32,15 @@ public class Array1 {
         return nums.length >= 1 && nums[0] == nums[nums.length - 1];
     }
 
+    /**
+     * Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
+     *
+     * makePi() → [3, 1, 4]
+     *
+     * @return int[] with 3 elements containing the first 3 values of PI
+     */
+    public int[] makePi() {
+        return new int[]{3, 1, 4};
+    }
+
 }

@@ -3,8 +3,7 @@ package challenges;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Array1Test {
 
@@ -43,5 +42,14 @@ class Array1Test {
         assertFalse(sameFirstLast);
         assertTrue(sameFirstLast2);
         assertTrue(sameFirstLast3);
+    }
+
+    @Test
+    void makePi() {
+        int[] pi = {3, 1, 4};
+
+        int[] makePi = array1.makePi();
+
+        assertArrayEquals(pi, makePi);
     }
 }
