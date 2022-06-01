@@ -554,4 +554,12 @@ public class Warmup1 {
         }
         return s.toString();
     }
+
+    public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if (equalOk) {// 501, 502, 502
+            b+=1; // 501, 503, 502
+            c+=2; // 501, 503, 505
+        }
+        return a < b && b < c;
+    }
 }

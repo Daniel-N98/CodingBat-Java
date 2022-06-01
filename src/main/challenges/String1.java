@@ -593,7 +593,6 @@ public class String1 {
         if (str.length() > 0 && str.charAt(lastIndex) == 'x') {
             str = str.substring(0, lastIndex);
         }
-
         return str;
     }
 

@@ -432,4 +432,11 @@ class Warmup1Test {
         assertEquals(expected, everyNth);
         assertEquals(expected2, everyNth2);
     }
+//
+//    @Test
+//    void inOrderEqual() {
+//        boolean inEqual = warmup1.inOrderEqual(501, 502, 502, false);
+//
+//        assertTrue(inEqual);
+//    }
 }
