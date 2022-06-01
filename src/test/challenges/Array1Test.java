@@ -67,4 +67,19 @@ class Array1Test {
         assertTrue(commonEnd);
         assertFalse(commonEnd2);
     }
+
+    @Test
+    void sum3() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {5, 11, 2};
+        int[] nums3 = {0, 6, -4};
+
+        int sum3 = array1.sum3(nums);
+        int sum3_2 = array1.sum3(nums2);
+        int sum3_3 = array1.sum3(nums3);
+
+        assertEquals(6, sum3);
+        assertEquals(18, sum3_2);
+        assertEquals(2, sum3_3);
+    }
 }
