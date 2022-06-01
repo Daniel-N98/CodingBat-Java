@@ -52,4 +52,19 @@ class Array1Test {
 
         assertArrayEquals(pi, makePi);
     }
+
+    @Test
+    void commonEnd() {
+        int[] a = {1, 2, 3};
+        int[] a2 = {1, 8, 1};
+
+        int[] b = {7, 3};
+        int[] b2 = {2, 6, 2};
+
+        boolean commonEnd = array1.commonEnd(a, b);
+        boolean commonEnd2 = array1.commonEnd(a2, b2);
+
+        assertTrue(commonEnd);
+        assertFalse(commonEnd2);
+    }
 }
