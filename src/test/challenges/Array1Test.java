@@ -210,4 +210,19 @@ class Array1Test {
         assertTrue(no23);
         assertFalse(no23_2);
     }
+
+    @Test
+    void makeLast() {
+        int[] nums = {4, 5, 6};
+        int[] nums2 = {2, 4};
+
+        int[] makeLast = array1.makeLast(nums);
+        int[] makeLast2 = array1.makeLast(nums2);
+
+        int[] expected = {0, 0, 0, 0, 0, 6};
+        int[] expected2 = {0, 0, 0, 4};
+
+        assertArrayEquals(makeLast, expected);
+        assertArrayEquals(makeLast2, expected2);
+    }
 }
