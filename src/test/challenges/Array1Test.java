@@ -183,4 +183,19 @@ class Array1Test {
         assertArrayEquals(makeEnds, expected);
         assertArrayEquals(makeEnds2, expected2);
     }
+
+    @Test
+    void has23() {
+        int[] nums = {2, 5};
+        int[] nums2 = {7, 7};
+        int[] nums3 = {4, 3};
+
+        boolean has23 = array1.has23(nums);
+        boolean has23_2 = array1.has23(nums2);
+        boolean has23_3 = array1.has23(nums3);
+
+        assertTrue(has23);
+        assertFalse(has23_2);
+        assertTrue(has23_3);
+    }
 }
