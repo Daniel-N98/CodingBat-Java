@@ -144,5 +144,18 @@ public class Array1 {
         return nums[0] + nums[1];
     }
 
-
+    /**
+     * Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+     *
+     * middleWay([1, 2, 3], [4, 5, 6]) → [2, 5]
+     * middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
+     * middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
+     *
+     * @param a int[]
+     * @param b int[]
+     * @return int[] length 2 containing the middle elements of both int[] parameters
+     */
+    public int[] middleWay(int[] a, int[] b) {
+        return new int[] {a[1], b[1]};
+    }
 }

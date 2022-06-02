@@ -150,4 +150,22 @@ class Array1Test {
         assertEquals(2, sum2_2);
         assertEquals(9, sum2_3);
     }
+
+    @Test
+    void middleWay() {
+        int[] a = {1, 2, 3};
+        int[] a2 = {7, 7, 7};
+
+        int[] b = {4, 5, 6};
+        int[] b2 = {2, 8, 9};
+
+        int[] middleWay = array1.middleWay(a, b);
+        int[] middleWay2 = array1.middleWay(a2, b2);
+
+        int[] expected = {2, 5};
+        int[] expected2 = {7, 8};
+
+        assertArrayEquals(expected, middleWay);
+        assertArrayEquals(expected2, middleWay2);
+    }
 }
