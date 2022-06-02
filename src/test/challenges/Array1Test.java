@@ -168,4 +168,19 @@ class Array1Test {
         assertArrayEquals(expected, middleWay);
         assertArrayEquals(expected2, middleWay2);
     }
+
+    @Test
+    void makeEnds() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {7, 4, 6, 2};
+
+        int[] makeEnds = array1.makeEnds(nums);
+        int[] makeEnds2 = array1.makeEnds(nums2);
+
+        int[] expected = {1, 3};
+        int[] expected2 = {7, 2};
+
+        assertArrayEquals(makeEnds, expected);
+        assertArrayEquals(makeEnds2, expected2);
+    }
 }
