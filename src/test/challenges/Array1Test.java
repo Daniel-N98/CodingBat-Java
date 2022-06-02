@@ -198,4 +198,16 @@ class Array1Test {
         assertFalse(has23_2);
         assertTrue(has23_3);
     }
+
+    @Test
+    void no23() {
+        int[] nums = {4, 5};
+        int[] nums2 = {3, 3};
+
+        boolean no23 = array1.no23(nums);
+        boolean no23_2 = array1.no23(nums2);
+
+        assertTrue(no23);
+        assertFalse(no23_2);
+    }
 }
