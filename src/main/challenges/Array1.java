@@ -222,4 +222,26 @@ public class Array1 {
         return returnNums;
     }
 
+    /**
+     * Given an int array, return true if the array contains 2 twice,
+     * or 3 twice. The array will be length 0, 1, or 2.
+     *
+     * double23([2, 2]) → true
+     * double23([3, 3]) → true
+     * double23([2, 3]) → false
+     *
+     * @param nums int[]
+     * @return True if int[] parameter contains 2 twice, or 3 twice. False otherwise
+     */
+    public boolean double23(int[] nums) {
+        if (Arrays.stream(nums).filter(num -> num == 2).toArray().length >= 2){
+            return true;
+        }
+        return Arrays.stream(nums)
+                .filter(num -> num == 3)
+                .toArray()
+                .length >= 2;
+    }
+
+
 }

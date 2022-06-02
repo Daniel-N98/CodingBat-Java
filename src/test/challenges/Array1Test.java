@@ -225,4 +225,19 @@ class Array1Test {
         assertArrayEquals(makeLast, expected);
         assertArrayEquals(makeLast2, expected2);
     }
+
+    @Test
+    void double23() {
+        int[] nums = {2, 2};
+        int[] nums2 = {3, 3};
+        int[] nums3 = {2, 3};
+
+        boolean double23 = array1.double23(nums);
+        boolean double23_2 = array1.double23(nums2);
+        boolean double23_3 = array1.double23(nums3);
+
+        assertTrue(double23);
+        assertTrue(double23_2);
+        assertFalse(double23_3);
+    }
 }
