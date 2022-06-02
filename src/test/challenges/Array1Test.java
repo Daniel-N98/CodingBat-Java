@@ -116,4 +116,23 @@ class Array1Test {
         assertArrayEquals(expected, reverse3);
         assertArrayEquals(expected2, reverse3_2);
     }
+
+    @Test
+    void maxEnd3() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {11, 5, 9};
+        int[] nums3 = {2, 11, 3};
+
+        int[] maxEnd3 = array1.maxEnd3(nums);
+        int[] maxEnd3_2 = array1.maxEnd3(nums2);
+        int[] maxEnd3_3 = array1.maxEnd3(nums3);
+
+        int[] expected = {3, 3, 3};
+        int[] expected2 = {11, 11, 11};
+        int[] expected3 = {3, 3, 3};
+
+        assertArrayEquals(expected, maxEnd3);
+        assertArrayEquals(expected2, maxEnd3_2);
+        assertArrayEquals(expected3, maxEnd3_3);
+    }
 }
