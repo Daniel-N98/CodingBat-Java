@@ -135,4 +135,19 @@ class Array1Test {
         assertArrayEquals(expected2, maxEnd3_2);
         assertArrayEquals(expected3, maxEnd3_3);
     }
+
+    @Test
+    void sum2() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {1, 1};
+        int[] nums3 = {4, 5, 6, 7 ,8 };
+
+        int sum2 = array1.sum2(nums);
+        int sum2_2 = array1.sum2(nums2);
+        int sum2_3 = array1.sum2(nums3);
+
+        assertEquals(3, sum2);
+        assertEquals(2, sum2_2);
+        assertEquals(9, sum2_3);
+    }
 }
