@@ -274,4 +274,19 @@ class Array1Test {
         assertEquals(2, start1);
         assertEquals(1, start1_2);
     }
+
+    @Test
+    void biggerTwo() {
+        int[] a = {1, 2};
+        int[] a2 = {3, 4};
+
+        int[] b = {6, 7};
+        int[] b2 = {3, 1};
+
+        int[] biggerTwo = array1.biggerTwo(a, b);
+        int[] biggerTwo2 = array1.biggerTwo(b2, a2);
+
+        assertArrayEquals(b, biggerTwo);
+        assertArrayEquals(a2, biggerTwo2);
+    }
 }
