@@ -240,4 +240,23 @@ class Array1Test {
         assertTrue(double23_2);
         assertFalse(double23_3);
     }
+
+    @Test
+    void fix23() {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {2, 3, 5};
+        int[] nums3 = {1, 2, 1};
+
+        int[] fix23 = array1.fix23(nums);
+        int[] fix23_2 = array1.fix23(nums2);
+        int[] fix23_3 = array1.fix23(nums3);
+
+        int[] expected = {1, 2, 0};
+        int[] expected2 = {2, 0, 5};
+        int[] expected3 = {1, 2, 1};
+
+        assertArrayEquals(fix23, expected);
+        assertArrayEquals(fix23_2, expected2);
+        assertArrayEquals(fix23_3, expected3);
+    }
 }
