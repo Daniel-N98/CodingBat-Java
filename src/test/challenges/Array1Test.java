@@ -15,7 +15,7 @@ class Array1Test {
     }
 
     @Test
-    void firstLast6(){
+    void firstLast6() {
         int[] nums = {1, 2, 6};
         int[] nums2 = {13, 6, 1, 2, 3};
         int[] nums3 = {6};
@@ -140,7 +140,7 @@ class Array1Test {
     void sum2() {
         int[] nums = {1, 2, 3};
         int[] nums2 = {1, 1};
-        int[] nums3 = {4, 5, 6, 7 ,8 };
+        int[] nums3 = {4, 5, 6, 7, 8};
 
         int sum2 = array1.sum2(nums);
         int sum2_2 = array1.sum2(nums2);
