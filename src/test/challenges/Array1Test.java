@@ -289,4 +289,20 @@ class Array1Test {
         assertArrayEquals(b, biggerTwo);
         assertArrayEquals(a2, biggerTwo2);
     }
+
+    @Test
+    void makeMiddle() {
+        int[] nums = {1, 2, 3, 4};
+        int[] nums2 = {7, 1, 6, 1, 4, 9};
+
+        int[] makeMiddle = array1.makeMiddle(nums);
+        int[] makeMiddle2 = array1.makeMiddle(nums2);
+
+        int[] expected = {2, 3};
+        int[] expected2 = {6, 1};
+
+        assertArrayEquals(makeMiddle, expected);
+        assertArrayEquals(makeMiddle2, expected2);
+
+    }
 }
