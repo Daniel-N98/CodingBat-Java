@@ -180,8 +180,8 @@ class Array1Test {
         int[] expected = {1, 3};
         int[] expected2 = {7, 2};
 
-        assertArrayEquals(makeEnds, expected);
-        assertArrayEquals(makeEnds2, expected2);
+        assertArrayEquals(expected, makeEnds);
+        assertArrayEquals(expected2, makeEnds2);
     }
 
     @Test
@@ -222,8 +222,8 @@ class Array1Test {
         int[] expected = {0, 0, 0, 0, 0, 6};
         int[] expected2 = {0, 0, 0, 4};
 
-        assertArrayEquals(makeLast, expected);
-        assertArrayEquals(makeLast2, expected2);
+        assertArrayEquals(expected, makeLast);
+        assertArrayEquals(expected2, makeLast2);
     }
 
     @Test
@@ -255,9 +255,9 @@ class Array1Test {
         int[] expected2 = {2, 0, 5};
         int[] expected3 = {1, 2, 1};
 
-        assertArrayEquals(fix23, expected);
-        assertArrayEquals(fix23_2, expected2);
-        assertArrayEquals(fix23_3, expected3);
+        assertArrayEquals(expected, fix23);
+        assertArrayEquals(expected2, fix23_2);
+        assertArrayEquals(expected3, fix23_3);
     }
 
     @Test
@@ -273,7 +273,5 @@ class Array1Test {
 
         assertEquals(2, start1);
         assertEquals(1, start1_2);
-
-
     }
 }
