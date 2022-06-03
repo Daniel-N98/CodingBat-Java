@@ -259,4 +259,21 @@ class Array1Test {
         assertArrayEquals(fix23_2, expected2);
         assertArrayEquals(fix23_3, expected3);
     }
+
+    @Test
+    void start1() {
+        int[] a = {1, 2, 3};
+        int[] a2 = {7, 2, 3};
+
+        int[] b = {1, 3};
+        int[] b2 = {1};
+
+        int start1 = array1.start1(a, b);
+        int start1_2 = array1.start1(a2, b2);
+
+        assertEquals(2, start1);
+        assertEquals(1, start1_2);
+
+
+    }
 }
