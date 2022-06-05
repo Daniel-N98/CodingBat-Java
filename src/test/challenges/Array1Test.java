@@ -305,4 +305,23 @@ class Array1Test {
         assertArrayEquals(makeMiddle2, expected2);
 
     }
+
+    @Test
+    void plusTwo() {
+        int[] a = {1, 2};
+        int[] a2 = {9, 2};
+
+        int[] b = {3, 4};
+        int[] b2 = {3, 4};
+
+        int[] plusTwo = array1.plusTwo(a, b);
+        int[] plusTwo2 = array1.plusTwo(a2, b2);
+
+        int[] expected = {1, 2, 3, 4};
+        int[] expected2 = {9, 2, 3, 4};
+
+        assertArrayEquals(expected, plusTwo);
+        assertArrayEquals(expected2, plusTwo2);
+
+    }
 }

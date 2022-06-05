@@ -322,4 +322,20 @@ public class Array1 {
     public int[] makeMiddle(int[] nums) {
         return new int[]{nums[(nums.length - 1) / 2], nums[(nums.length) / 2]};
     }
+
+    /**
+     * Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
+     *
+     * plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4]
+     * plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2]
+     * plusTwo([9, 2], [3, 4]) → [9, 2, 3, 4]
+     *
+     * @param a int[]
+     * @param b int[]
+     * @return int[] of both int[] parameters combined
+     */
+    public int[] plusTwo(int[] a, int[] b) {
+        return new int[]{a[0], a[1], b[0], b[1]};
+    }
+
 }
