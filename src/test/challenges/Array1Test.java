@@ -301,8 +301,8 @@ class Array1Test {
         int[] expected = {2, 3};
         int[] expected2 = {6, 1};
 
-        assertArrayEquals(makeMiddle, expected);
-        assertArrayEquals(makeMiddle2, expected2);
+        assertArrayEquals(expected, makeMiddle);
+        assertArrayEquals(expected2, makeMiddle2);
 
     }
 
